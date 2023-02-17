@@ -79,10 +79,11 @@
         }
       }
   ],
-  "get-second-screen": [
+  "get-second-screen": {
+    "exausters": [
       {"id": 0,
-        "exauster": {
-          "bearing_1" : {
+        "bearings": [
+          {"id": 0,
             "vibrations": {
               "axial_value": 12,
               "vertical_value": 11,
@@ -94,44 +95,7 @@
               "status": "alarm"
             }
           },
-          "bearing_2" : {
-            "vibrations": {
-              "axial_value": 12,
-              "vertical_value": 11,
-              "horizontal_value": 10,
-              "status": "alarm"
-            },
-
-            "temperature": {
-              "value": 5,
-              "status": "alarm"
-            }
-          },
-          "bearing_3" : {
-            "temperature": {
-              "value": 5,
-              "status": "alarm"
-            }
-          },
-          "bearing_4" : {
-            "temperature": {
-              "value": 5,
-              "status": "well"
-            }
-          },
-          "bearing_5" : {
-            "temperature": {
-              "value": 5,
-              "status": "well"
-            }
-          },
-          "bearing_6" : {
-            "temperature": {
-              "value": 5,
-              "status": "well"
-            }
-          },
-          "bearing_7" : {
+          {"id": 1,
             "vibrations": {
               "axial_value": 12,
               "vertical_value": 11,
@@ -144,7 +108,31 @@
               "status": "alarm"
             }
           },
-          "bearing_8" : {
+          {"id": 2,
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 3,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 4,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 5,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 6,
             "vibrations": {
               "axial_value": 12,
               "vertical_value": 11,
@@ -157,15 +145,490 @@
               "status": "alarm"
             }
           },
-          "bearing_9" : {
+          {"id": 7,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 8,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 9,
             "temperature": {
               "value": 5,
               "status": "well"
             }
           }
-        }
+        ]
+      },
+      {"id": 1,
+        "bearings": [
+          {"id": 0,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 1,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 2,
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 3,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 4,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 5,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 6,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 7,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 8,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 9,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          }
+        ]
+      },
+      {"id": 2,
+        "bearings": [
+          {"id": 0,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 1,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 2,
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 3,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 4,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 5,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 6,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 7,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 8,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 9,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          }
+        ]
+      },
+      {"id": 3,
+        "bearings": [
+          {"id": 0,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 1,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 2,
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 3,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 4,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 5,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 6,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 7,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 8,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 9,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          }
+        ]
+      },
+      {"id": 4,
+        "bearings": [
+          {"id": 0,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 1,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 2,
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 3,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 4,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 5,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 6,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 7,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 8,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 9,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          }
+        ]
+      },
+      {"id": 5,
+        "bearings": [
+          {"id": 0,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 1,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 2,
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 3,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 4,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 5,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 6,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 7,
+            "vibrations": {
+              "axial_value": 12,
+              "vertical_value": 11,
+              "horizontal_value": 10,
+              "status": "alarm"
+            },
+
+            "temperature": {
+              "value": 5,
+              "status": "alarm"
+            }
+          },
+          {"id": 8,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          },
+          {"id": 9,
+            "temperature": {
+              "value": 5,
+              "status": "well"
+            }
+          }
+        ]
       }
-  ]
+    ]}
+
 }
 
 
