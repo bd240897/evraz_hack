@@ -1,6 +1,7 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import MainView from '../views/MainView.vue'
 import First from '../views/First.vue'
+import Second from '../views/Second.vue'
 
 
 
@@ -15,6 +16,12 @@ const routes = [
         name: 'First',
         component: First
     },
+    {
+        path: '/second-screen',
+        name: 'Second',
+        component: Second
+    },
+
 ]
 
 const router = createRouter({

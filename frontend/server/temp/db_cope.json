@@ -1,18 +1,19 @@
 {
   "get-first-screen": [
       {"id": 0,
-       "exauster": {
-          "bearing_1" : {"vibration": "alarm", "temperature": "alarm"},
-          "bearing_2" : {"vibration": "well", "temperature": "well"},
-          "bearing_3" : {"temperature": "warning"},
-          "bearing_4" : {"temperature": "well"},
-          "bearing_5" : {"temperature": "well"},
-          "bearing_6" : {"temperature": "well"},
-          "bearing_7" : {"vibration": "well", "temperature": "well"},
-          "bearing_8" : {"vibration": "well", "temperature": "warning"},
-          "bearing_9" : {"temperature": "well"}
-        }
+       "bearings": [
+          {"id": 0, "vibration": "alarm", "temperature": "alarm"},
+          {"id": 1, "vibration": "well", "temperature": "well"},
+          {"id": 2, "temperature": "warning"},
+          {"id": 3, "temperature": "well"},
+          {"id": 4, "temperature": "well"},
+          {"id": 5, "temperature": "well"},
+          {"id": 6, "vibration": "well", "temperature": "well"},
+          {"id": 7, "vibration": "well", "temperature": "warning"},
+          {"id": 8, "temperature": "well"}
+        ]
       },
+
       {"id": 1,
        "exauster": {
           "bearing_1" : {"vibration": "alarm", "temperature": "alarm"},
@@ -82,6 +83,7 @@
   "get-second-screen": [
       {"id": 0,
         "exauster": {
+
           "bearing_1" : {
             "vibrations": {
               "axial_value": 12,
@@ -89,6 +91,7 @@
               "horizontal_value": 10,
               "status": "alarm"
             },
+
             "temperature": {
               "value": 5,
               "status": "alarm"
@@ -162,7 +165,7 @@
               "value": 5,
               "status": "well"
             }
-          }
+          },
         }
       }
   ]

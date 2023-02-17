@@ -16,8 +16,8 @@
       <b-collapse id="navbar-toggle-collapse" is-nav>
         <b-navbar-nav class="ms-auto text-white">
           <b-nav-item to="/" class="ms-2 text-white" active-class="white" href="#">Main</b-nav-item>
-          <b-nav-item to="/quick/" class="ms-2" href="#">Quick start</b-nav-item>
-          <b-nav-item to="/doctors/" class="ms-2" href="#">Clinics</b-nav-item>
+          <b-nav-item to="/first-screen/" class="ms-2" href="#">First</b-nav-item>
+          <b-nav-item to="/second-screen/" class="ms-2" href="#">Second</b-nav-item>
 <!--          <b-nav-item to="/team/" class="ms-2" href="#">About team</b-nav-item>-->
         </b-navbar-nav>
       </b-collapse>
