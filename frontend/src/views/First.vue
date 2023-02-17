@@ -1,14 +1,17 @@
 <template>
   <Navbar/>
 
-  <h1>Первый экран</h1>
+  <h1 class="screen-name text-center">Первый экран</h1>
+
   <section class="exausters">
     <div class="container">
 
       <div class="row">
-        <div class="exauster col-6">
 
-          <h2 class="exauster__name">Exauster #1</h2>
+        <div class="exauster col-2"
+             v-for="(item, index) in firstData">
+
+          <h2 class="exauster__name">Exauster #{{ index+1}}</h2>
 
           <img class="exauster__img"
                src="https://www.aircontrolindustries.com/wp-content/uploads/2019/04/Compressor-60hz-2.jpg" alt="">
@@ -18,11 +21,12 @@
             <h3 class="exauster__body__header">Все подшипники</h3>
 
             <div class="exauster__body__bearings"
-                v-for="(bearing, name, index) in firstData">
+                 v-for="(bearing, name, index) in item.exauster">
+
 
               <div class="exauster__body__bearings__bearing">
 
-                <div class="exauster__body__bearings__bearing__header"># {{index}}</div>
+                <div class="exauster__body__bearings__bearing__header"># {{ index }}</div>
 
 
                 <p class="exauster__body__bearings__bearing__temperature alert"
@@ -90,23 +94,30 @@ html, body
   height: 100%
 
   .exauster
-    padding: 0
+    padding: 0 20px
     margin: 0
 
     &__name
+
     &__img
       height: auto
       width: 100%
+
     &__body
       &__header
+        font-size: 22px
+        text-align: center
+
       &__bearings
         &__bearing
           &__header
             padding: 0
             margin: 0
+
           &__vibration
             padding: 0
             margin: 0
+
           &__temperature
             padding: 0
             margin: 0

@@ -1,6 +1,7 @@
 {
   "get-first-screen": [
-      "exauster_1": {
+      {"id": 0,
+       "exauster": {
           "bearing_1" : {"vibration": "alarm", "temperature": "alarm"},
           "bearing_2" : {"vibration": "well", "temperature": "well"},
           "bearing_3" : {"temperature": "warning"},
@@ -10,8 +11,10 @@
           "bearing_7" : {"vibration": "well", "temperature": "well"},
           "bearing_8" : {"vibration": "well", "temperature": "warning"},
           "bearing_9" : {"temperature": "well"}
-        },
-      "exauster_2": {
+        }
+      },
+      {"id": 1,
+       "exauster": {
           "bearing_1" : {"vibration": "alarm", "temperature": "alarm"},
           "bearing_2" : {"vibration": "well", "temperature": "well"},
           "bearing_3" : {"temperature": "warning"},
@@ -21,7 +24,60 @@
           "bearing_7" : {"vibration": "well", "temperature": "well"},
           "bearing_8" : {"vibration": "well", "temperature": "warning"},
           "bearing_9" : {"temperature": "well"}
-        },
+        }
+      },
+      {"id": 2,
+        "exauster": {
+        "bearing_1" : {"vibration": "alarm", "temperature": "alarm"},
+        "bearing_2" : {"vibration": "well", "temperature": "well"},
+        "bearing_3" : {"temperature": "warning"},
+        "bearing_4" : {"temperature": "well"},
+        "bearing_5" : {"temperature": "well"},
+        "bearing_6" : {"temperature": "well"},
+        "bearing_7" : {"vibration": "well", "temperature": "well"},
+        "bearing_8" : {"vibration": "well", "temperature": "warning"},
+        "bearing_9" : {"temperature": "well"}
+        }
+      },
+      {"id": 3,
+        "exauster": {
+        "bearing_1" : {"vibration": "alarm", "temperature": "alarm"},
+        "bearing_2" : {"vibration": "well", "temperature": "well"},
+        "bearing_3" : {"temperature": "warning"},
+        "bearing_4" : {"temperature": "well"},
+        "bearing_5" : {"temperature": "well"},
+        "bearing_6" : {"temperature": "well"},
+        "bearing_7" : {"vibration": "well", "temperature": "well"},
+        "bearing_8" : {"vibration": "well", "temperature": "warning"},
+        "bearing_9" : {"temperature": "well"}
+        }
+      },
+      {"id": 4,
+        "exauster": {
+        "bearing_1" : {"vibration": "alarm", "temperature": "alarm"},
+        "bearing_2" : {"vibration": "well", "temperature": "well"},
+        "bearing_3" : {"temperature": "warning"},
+        "bearing_4" : {"temperature": "well"},
+        "bearing_5" : {"temperature": "well"},
+        "bearing_6" : {"temperature": "well"},
+        "bearing_7" : {"vibration": "well", "temperature": "well"},
+        "bearing_8" : {"vibration": "well", "temperature": "warning"},
+        "bearing_9" : {"temperature": "well"}
+        }
+      },
+      {"id": 5,
+        "exauster": {
+        "bearing_1" : {"vibration": "alarm", "temperature": "alarm"},
+        "bearing_2" : {"vibration": "well", "temperature": "well"},
+        "bearing_3" : {"temperature": "warning"},
+        "bearing_4" : {"temperature": "well"},
+        "bearing_5" : {"temperature": "well"},
+        "bearing_6" : {"temperature": "well"},
+        "bearing_7" : {"vibration": "well", "temperature": "well"},
+        "bearing_8" : {"vibration": "well", "temperature": "warning"},
+        "bearing_9" : {"temperature": "well"}
+        }
+      }
   ]
 }
 
