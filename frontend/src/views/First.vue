@@ -5,30 +5,26 @@
 
   <section class="exausters">
     <div class="container">
-
       <div class="row">
 
+        <!--Эксгаустер-->
         <div class="exauster col-2"
              v-for="(item, index) in firstData">
 
-          <h2 class="exauster__name">Exauster #{{ index+1}}</h2>
-
+          <h2 class="exauster__name">Exauster #{{ index + 1 }}</h2>
           <img class="exauster__img"
                src="https://www.aircontrolindustries.com/wp-content/uploads/2019/04/Compressor-60hz-2.jpg" alt="">
 
+          <!--Подшипники-->
           <div class="exauster__body">>
-
             <h3 class="exauster__body__header">Все подшипники</h3>
 
             <div class="exauster__body__bearings"
                  v-for="(bearing, name, index) in item.exauster">
 
-
+               <!--Параметры-->
               <div class="exauster__body__bearings__bearing">
-
                 <div class="exauster__body__bearings__bearing__header"># {{ index }}</div>
-
-
                 <p class="exauster__body__bearings__bearing__temperature alert"
                    v-bind:class="{'alert-warning': isWarning(bearing.temperature)}"
                    :class="{'alert-danger': isAlarm(bearing.temperature)}"
@@ -41,6 +37,7 @@
                   Vibrations: {{ bearing.vibration }}
                 </p>
               </div>
+
             </div>
 
           </div>
@@ -49,17 +46,20 @@
       </div>
     </div>
   </section>
+
+  <Footer/>
 </template>
 
 <script>
 import goToSomewhere from "@/mixins/goToSomewhere";
 import {mapActions, mapState} from "vuex";
 import Navbar from "@/components/Navbar";
-
+import Footer from "@/components/Footer";
 export default {
   name: "First",
   components: {
-    Navbar
+    Navbar,
+    Footer
   },
   mixins: [goToSomewhere],
   data() {
@@ -73,11 +73,9 @@ export default {
   methods: {
     ...mapActions('first', ["GET_FIRST_DATA",]),
     isWarning(str) {
-      console.log(str)
       return str === 'warning'
     },
     isAlarm(str) {
-      console.log(str)
       return str === 'alarm'
     },
   },

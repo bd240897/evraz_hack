@@ -111,7 +111,6 @@
 <script>
 import goToSomewhere from "@/mixins/goToSomewhere";
 import {mapActions} from "vuex";
-import TestSlot from "@/components/TestSlot";
 import Navbar from "@/components/Navbar";
 
 export default {

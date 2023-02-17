@@ -15,11 +15,9 @@
 </style>
 
 <script>
-import PageLoader from './components/PageLoader'
 export default {
   name: 'App',
   components: {
-    PageLoader
   },
   created() {
   }
