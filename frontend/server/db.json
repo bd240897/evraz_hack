@@ -1,0 +1,14 @@
+{
+  "get-first-screen": {
+      "bearing_1" : {"vibration": "alarm", "temperature": "alarm"},
+      "bearing_2" : {"vibration": "well", "temperature": "well"},
+      "bearing_3" : {"temperature": "warning"},
+      "bearing_4" : {"temperature": "well"},
+      "bearing_5" : {"temperature": "well"},
+      "bearing_6" : {"temperature": "well"},
+      "bearing_7" : {"vibration": "well", "temperature": "well"},
+      "bearing_8" : {"vibration": "well", "temperature": "warning"},
+      "bearing_9" : {"temperature": "well"}
+    }
+}
+
