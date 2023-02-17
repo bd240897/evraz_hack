@@ -27,8 +27,8 @@
                 <div class="exauster__body__bearings__bearing__header"># {{ index }}</div>
 
                 <div class="exauster__body__bearings__bearing__temperature alert"
-                     v-bind:class="{'alert-warning': isWarning(bearing.temperature)}"
-                     :class="{'alert-danger': isAlarm(bearing.temperature)}"
+                     v-bind:class="{'alert-warning': isWarning(bearing.temperature.status)}"
+                     :class="{'alert-danger': isAlarm(bearing.temperature.status)}"
                 >
                   <p>Temperature: {{ bearing.temperature.value }}</p>
                   <p>Status: {{ bearing.temperature.status }}</p>
@@ -36,8 +36,8 @@
 
                 <div class="exauster__body__bearings__bearing__vibration alert"
                      v-if="bearing.vibrations"
-                     v-bind:class="{'alert-danger': isWarning(bearing.temperature)}"
-                     :class="{'alert-danger': isAlarm(bearing.temperature)}"
+                     v-bind:class="{'alert-danger': isWarning(bearing.vibrations.status)}"
+                     :class="{'alert-danger': isAlarm(bearing.vibrations.status)}"
                 >
                   <p>Vibrations A: {{ bearing.vibrations.axial_value }}</p>
                   <p>Vibrations V: {{ bearing.vibrations.vertical_value }}</p>

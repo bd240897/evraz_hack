@@ -1,84 +1,86 @@
 {
-  "get-first-screen": [
+  "get-first-screen": {
+    "exausters": [
       {"id": 0,
-       "exauster": {
-          "bearing_1" : {"vibration": "alarm", "temperature": "alarm"},
-          "bearing_2" : {"vibration": "well", "temperature": "well"},
-          "bearing_3" : {"temperature": "warning"},
-          "bearing_4" : {"temperature": "well"},
-          "bearing_5" : {"temperature": "well"},
-          "bearing_6" : {"temperature": "well"},
-          "bearing_7" : {"vibration": "well", "temperature": "well"},
-          "bearing_8" : {"vibration": "well", "temperature": "warning"},
-          "bearing_9" : {"temperature": "well"}
-        }
+       "bearings": [
+          {"id": 0, "vibration": "alarm", "temperature": "alarm"},
+          {"id": 0, "vibration": "well", "temperature": "well"},
+          {"id": 0, "temperature": "warning"},
+          {"id": 0, "temperature": "well"},
+          {"id": 0, "temperature": "well"},
+          {"id": 0, "temperature": "well"},
+          {"id": 0, "vibration": "well", "temperature": "well"},
+          {"id": 0, "vibration": "well", "temperature": "warning"},
+          {"id": 0, "temperature": "well"}
+        ]
       },
       {"id": 1,
-       "exauster": {
-          "bearing_1" : {"vibration": "alarm", "temperature": "alarm"},
-          "bearing_2" : {"vibration": "well", "temperature": "well"},
-          "bearing_3" : {"temperature": "warning"},
-          "bearing_4" : {"temperature": "well"},
-          "bearing_5" : {"temperature": "well"},
-          "bearing_6" : {"temperature": "well"},
-          "bearing_7" : {"vibration": "well", "temperature": "well"},
-          "bearing_8" : {"vibration": "well", "temperature": "warning"},
-          "bearing_9" : {"temperature": "well"}
-        }
+       "bearings": [
+          {"id": 0, "vibration": "alarm", "temperature": "alarm"},
+          {"id": 0, "vibration": "well", "temperature": "well"},
+          {"id": 0, "temperature": "warning"},
+          {"id": 0, "temperature": "well"},
+          {"id": 0, "temperature": "well"},
+          {"id": 0, "temperature": "well"},
+          {"id": 0, "vibration": "well", "temperature": "well"},
+          {"id": 0, "vibration": "well", "temperature": "warning"},
+          {"id": 0, "temperature": "well"}
+        ]
       },
       {"id": 2,
-        "exauster": {
-        "bearing_1" : {"vibration": "alarm", "temperature": "alarm"},
-        "bearing_2" : {"vibration": "well", "temperature": "well"},
-        "bearing_3" : {"temperature": "warning"},
-        "bearing_4" : {"temperature": "well"},
-        "bearing_5" : {"temperature": "well"},
-        "bearing_6" : {"temperature": "well"},
-        "bearing_7" : {"vibration": "well", "temperature": "well"},
-        "bearing_8" : {"vibration": "well", "temperature": "warning"},
-        "bearing_9" : {"temperature": "well"}
-        }
+       "bearings": [
+          {"id": 0, "vibration": "alarm", "temperature": "alarm"},
+          {"id": 0, "vibration": "well", "temperature": "well"},
+          {"id": 0, "temperature": "warning"},
+          {"id": 0, "temperature": "well"},
+          {"id": 0, "temperature": "well"},
+          {"id": 0, "temperature": "well"},
+          {"id": 0, "vibration": "well", "temperature": "well"},
+          {"id": 0, "vibration": "well", "temperature": "warning"},
+          {"id": 0, "temperature": "well"}
+        ]
       },
       {"id": 3,
-        "exauster": {
-        "bearing_1" : {"vibration": "alarm", "temperature": "alarm"},
-        "bearing_2" : {"vibration": "well", "temperature": "well"},
-        "bearing_3" : {"temperature": "warning"},
-        "bearing_4" : {"temperature": "well"},
-        "bearing_5" : {"temperature": "well"},
-        "bearing_6" : {"temperature": "well"},
-        "bearing_7" : {"vibration": "well", "temperature": "well"},
-        "bearing_8" : {"vibration": "well", "temperature": "warning"},
-        "bearing_9" : {"temperature": "well"}
-        }
+       "bearings": [
+          {"id": 0, "vibration": "alarm", "temperature": "alarm"},
+          {"id": 0, "vibration": "well", "temperature": "well"},
+          {"id": 0, "temperature": "warning"},
+          {"id": 0, "temperature": "well"},
+          {"id": 0, "temperature": "well"},
+          {"id": 0, "temperature": "well"},
+          {"id": 0, "vibration": "well", "temperature": "well"},
+          {"id": 0, "vibration": "well", "temperature": "warning"},
+          {"id": 0, "temperature": "well"}
+        ]
       },
       {"id": 4,
-        "exauster": {
-        "bearing_1" : {"vibration": "alarm", "temperature": "alarm"},
-        "bearing_2" : {"vibration": "well", "temperature": "well"},
-        "bearing_3" : {"temperature": "warning"},
-        "bearing_4" : {"temperature": "well"},
-        "bearing_5" : {"temperature": "well"},
-        "bearing_6" : {"temperature": "well"},
-        "bearing_7" : {"vibration": "well", "temperature": "well"},
-        "bearing_8" : {"vibration": "well", "temperature": "warning"},
-        "bearing_9" : {"temperature": "well"}
-        }
+       "bearings": [
+          {"id": 0, "vibration": "alarm", "temperature": "alarm"},
+          {"id": 0, "vibration": "well", "temperature": "well"},
+          {"id": 0, "temperature": "warning"},
+          {"id": 0, "temperature": "well"},
+          {"id": 0, "temperature": "well"},
+          {"id": 0, "temperature": "well"},
+          {"id": 0, "vibration": "well", "temperature": "well"},
+          {"id": 0, "vibration": "well", "temperature": "warning"},
+          {"id": 0, "temperature": "well"}
+        ]
       },
       {"id": 5,
-        "exauster": {
-        "bearing_1" : {"vibration": "alarm", "temperature": "alarm"},
-        "bearing_2" : {"vibration": "well", "temperature": "well"},
-        "bearing_3" : {"temperature": "warning"},
-        "bearing_4" : {"temperature": "well"},
-        "bearing_5" : {"temperature": "well"},
-        "bearing_6" : {"temperature": "well"},
-        "bearing_7" : {"vibration": "well", "temperature": "well"},
-        "bearing_8" : {"vibration": "well", "temperature": "warning"},
-        "bearing_9" : {"temperature": "well"}
-        }
+       "bearings": [
+          {"id": 0, "vibration": "alarm", "temperature": "alarm"},
+          {"id": 0, "vibration": "well", "temperature": "well"},
+          {"id": 0, "temperature": "warning"},
+          {"id": 0, "temperature": "well"},
+          {"id": 0, "temperature": "well"},
+          {"id": 0, "temperature": "well"},
+          {"id": 0, "vibration": "well", "temperature": "well"},
+          {"id": 0, "vibration": "well", "temperature": "warning"},
+          {"id": 0, "temperature": "well"}
+        ]
       }
-  ],
+    ]},
+
   "get-second-screen": {
     "exausters": [
       {"id": 0,
@@ -92,7 +94,7 @@
             },
             "temperature": {
               "value": 5,
-              "status": "alarm"
+              "status": "warning"
             }
           },
           {"id": 1,
@@ -150,12 +152,12 @@
               "axial_value": 12,
               "vertical_value": 11,
               "horizontal_value": 10,
-              "status": "alarm"
+              "status": "warning"
             },
 
             "temperature": {
               "value": 5,
-              "status": "alarm"
+              "status": "warning"
             }
           },
           {"id": 8,

@@ -9,7 +9,7 @@
 
         <!--Эксгаустер-->
         <div class="exauster col-2"
-             v-for="(item, index) in firstData">
+             v-for="(item, index) in firstData.exausters">
 
           <h2 class="exauster__name">Exauster #{{ index + 1 }}</h2>
           <img class="exauster__img"
@@ -20,22 +20,22 @@
             <h3 class="exauster__body__header">Все подшипники</h3>
 
             <div class="exauster__body__bearings"
-                 v-for="(bearing, name, index) in item.exauster">
+                 v-for="(bearing, index) in item.bearings">
 
                <!--Параметры-->
               <div class="exauster__body__bearings__bearing">
                 <div class="exauster__body__bearings__bearing__header"># {{ index }}</div>
-                <p class="exauster__body__bearings__bearing__temperature alert"
+                <div class="exauster__body__bearings__bearing__temperature alert"
                    v-bind:class="{'alert-warning': isWarning(bearing.temperature)}"
                    :class="{'alert-danger': isAlarm(bearing.temperature)}"
                 >
-                  Temperature: {{ bearing.temperature }}</p>
-                <p class="exauster__body__bearings__bearing__vibration alert"
-                   v-bind:class="{'alert-danger': isWarning(bearing.temperature)}"
-                   :class="{'alert-danger': isAlarm(bearing.temperature)}"
+                  Temperature: {{ bearing.temperature }}</div>
+                <div class="exauster__body__bearings__bearing__vibration alert"
+                   v-bind:class="{'alert-danger': isWarning(bearing.vibration)}"
+                   :class="{'alert-danger': isAlarm(bearing.vibration)}"
                 >
                   Vibrations: {{ bearing.vibration }}
-                </p>
+                </div>
               </div>
 
             </div>
