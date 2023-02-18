@@ -18,7 +18,7 @@
             </button>
           </div>
 
-
+          <!--Фото машины-->
           <div class="col-6">
             <h2 class="exauster__name">Exauster #{{ secondData.id + 1 }}</h2>
             <img class="exauster__img"
@@ -26,10 +26,17 @@
           </div>
 
           <div class="exauster__body row mb-2">>
+
             <h3 class="exauster__body__header">Все подшипники</h3>
 
-            <div>
-              Work: {{ secondData.work }}
+            <!--Статус работы-->
+            <div class="exauster__parameter">
+              <div v-if="secondData.work" class="exauster__parameter__work--yes">
+                Работает
+              </div>
+              <div v-else class="exauster__parameter__work--no">
+                Не работает
+              </div>
             </div>
 
             <!--Подшипники-->
@@ -41,18 +48,20 @@
                 <div class="exauster__body__bearings__bearing__header"># {{ index }}</div>
 
 
+                <!--Температура-->
                 <div class="exauster__body__bearings__bearing__temperature alert"
-                     v-bind:class="{'alert-warning': isWarning(bearing.temperature.status)}"
-                     :class="{'alert-danger': isAlarm(bearing.temperature.status)}"
+                     v-bind:class="{'alert-warning': isWarning(bearing.temperature.status),
+                                    'alert-danger': isAlarm(bearing.temperature.status)}"
                 >
                   <p>Temperature: {{ bearing.temperature.value }}</p>
                   <p>Status: {{ bearing.temperature.status }}</p>
                 </div>
 
+                <!--Вибрация-->
                 <div class="exauster__body__bearings__bearing__vibration alert"
                      v-if="bearing.vibrations"
-                     v-bind:class="{'alert-danger': isWarning(bearing.vibrations.status)}"
-                     :class="{'alert-danger': isAlarm(bearing.vibrations.status)}"
+                     v-bind:class="{'alert-warning': isWarning(bearing.vibrations.status),
+                                    'alert-danger': isAlarm(bearing.vibrations.status)}"
                 >
                   <p>Vibrations A: {{ bearing.vibrations.axial_value }}</p>
                   <p>Vibrations V: {{ bearing.vibrations.vertical_value }}</p>
@@ -154,4 +163,15 @@ html, body
               padding: 0
               margin: 0
 
+
+  // статус работы
+  .exauster__parameter__work
+
+  .exauster__parameter__work--yes
+    background-color: yellow
+    color: black
+
+  .exauster__parameter__work--no
+    background-color: black
+    color: white
 </style>

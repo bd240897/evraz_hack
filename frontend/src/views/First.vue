@@ -11,11 +11,22 @@
         <div class="exauster col-2"
              v-for="(item, index) in firstData.exausters">
 
+          <!--Фото машины-->
           <h2 class="exauster__name">Exauster #{{ index + 1 }}</h2>
           <img class="exauster__img"
                src="https://www.aircontrolindustries.com/wp-content/uploads/2019/04/Compressor-60hz-2.jpg" alt=""
                v-on:click="goToSecond(index)"
           >
+
+          <!--Статус работы-->
+          <div class="exauster__parameter">
+            <div v-if="item.work" class="exauster__parameter__work--yes">
+              Работает
+            </div>
+            <div v-else class="exauster__parameter__work--no">
+              Не работает
+            </div>
+          </div>
 
           <!--Подшипники-->
           <div class="exauster__body">>
@@ -27,15 +38,19 @@
               <!--Параметры-->
               <div class="exauster__body__bearings__bearing">
                 <div class="exauster__body__bearings__bearing__header"># {{ index }}</div>
+
+                <!--Температура-->
                 <div class="exauster__body__bearings__bearing__temperature alert"
-                     v-bind:class="{'alert-warning': isWarning(bearing.temperature)}"
-                     :class="{'alert-danger': isAlarm(bearing.temperature)}"
+                     v-bind:class="{'alert-warning': isWarning(bearing.temperature),
+                                    'alert-danger': isAlarm(bearing.temperature)}"
                 >
                   Temperature: {{ bearing.temperature }}
                 </div>
+
+                <!--Вибрация-->
                 <div class="exauster__body__bearings__bearing__vibration alert"
-                     v-bind:class="{'alert-danger': isWarning(bearing.vibration)}"
-                     :class="{'alert-danger': isAlarm(bearing.vibration)}"
+                     v-bind:class="{'alert-warning': isWarning(bearing.vibration),
+                                    'alert-danger': isAlarm(bearing.vibration)}"
                 >
                   Vibrations: {{ bearing.vibration }}
                 </div>
@@ -130,4 +145,14 @@ html, body
             padding: 0
             margin: 0
 
+  // статус работы
+  .exauster__parameter__work
+
+  .exauster__parameter__work--yes
+    background-color: yellow
+    color: black
+
+  .exauster__parameter__work--no
+    background-color: black
+    color: white
 </style>
