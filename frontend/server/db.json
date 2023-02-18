@@ -5,14 +5,14 @@
       {"id": 0,
        "bearings": [
           {"id": 0, "vibration": "alarm", "temperature": "alarm"},
-          {"id": 0, "vibration": "well", "temperature": "well"},
-          {"id": 0, "temperature": "warning"},
-          {"id": 0, "temperature": "well"},
-          {"id": 0, "temperature": "well"},
-          {"id": 0, "temperature": "well"},
-          {"id": 0, "vibration": "well", "temperature": "well"},
-          {"id": 0, "vibration": "well", "temperature": "warning"},
-          {"id": 0, "temperature": "well"}
+          {"id": 1, "vibration": "well", "temperature": "well"},
+          {"id": 2, "temperature": "warning"},
+          {"id": 3, "temperature": "well"},
+          {"id": 4, "temperature": "well"},
+          {"id": 5, "temperature": "well"},
+          {"id": 6, "vibration": "well", "temperature": "well"},
+          {"id": 7, "vibration": "well", "temperature": "warning"},
+          {"id": 8, "temperature": "well"}
         ],
        "work": 0,
        "time": "2022-12-30T06:00:25.16886"
@@ -20,14 +20,14 @@
       {"id": 1,
        "bearings": [
           {"id": 0, "vibration": "alarm", "temperature": "alarm"},
-          {"id": 0, "vibration": "well", "temperature": "well"},
-          {"id": 0, "temperature": "warning"},
-          {"id": 0, "temperature": "well"},
-          {"id": 0, "temperature": "well"},
-          {"id": 0, "temperature": "well"},
-          {"id": 0, "vibration": "well", "temperature": "well"},
-          {"id": 0, "vibration": "well", "temperature": "warning"},
-          {"id": 0, "temperature": "well"}
+          {"id": 1, "vibration": "well", "temperature": "well"},
+          {"id": 2, "temperature": "warning"},
+          {"id": 3, "temperature": "well"},
+          {"id": 4, "temperature": "well"},
+          {"id": 5, "temperature": "well"},
+          {"id": 6, "vibration": "well", "temperature": "well"},
+          {"id": 7, "vibration": "well", "temperature": "warning"},
+          {"id": 8, "temperature": "well"}
         ],
        "work": 1,
        "time": "2022-12-30T06:00:25.16886"
@@ -35,14 +35,14 @@
       {"id": 2,
        "bearings": [
           {"id": 0, "vibration": "alarm", "temperature": "alarm"},
-          {"id": 0, "vibration": "well", "temperature": "well"},
-          {"id": 0, "temperature": "warning"},
-          {"id": 0, "temperature": "well"},
-          {"id": 0, "temperature": "well"},
-          {"id": 0, "temperature": "well"},
-          {"id": 0, "vibration": "well", "temperature": "well"},
-          {"id": 0, "vibration": "well", "temperature": "warning"},
-          {"id": 0, "temperature": "well"}
+          {"id": 1, "vibration": "well", "temperature": "well"},
+          {"id": 2, "temperature": "warning"},
+          {"id": 3, "temperature": "well"},
+          {"id": 4, "temperature": "well"},
+          {"id": 5, "temperature": "well"},
+          {"id": 6, "vibration": "well", "temperature": "well"},
+          {"id": 7, "vibration": "well", "temperature": "warning"},
+          {"id": 8, "temperature": "well"}
         ],
        "work": 1,
        "time": "2022-12-30T06:00:25.16886"
@@ -50,14 +50,14 @@
       {"id": 3,
        "bearings": [
           {"id": 0, "vibration": "alarm", "temperature": "alarm"},
-          {"id": 0, "vibration": "well", "temperature": "well"},
-          {"id": 0, "temperature": "warning"},
-          {"id": 0, "temperature": "well"},
-          {"id": 0, "temperature": "well"},
-          {"id": 0, "temperature": "well"},
-          {"id": 0, "vibration": "well", "temperature": "well"},
-          {"id": 0, "vibration": "well", "temperature": "warning"},
-          {"id": 0, "temperature": "well"}
+          {"id": 1, "vibration": "well", "temperature": "well"},
+          {"id": 2, "temperature": "warning"},
+          {"id": 3, "temperature": "well"},
+          {"id": 4, "temperature": "well"},
+          {"id": 5, "temperature": "well"},
+          {"id": 6, "vibration": "well", "temperature": "well"},
+          {"id": 7, "vibration": "well", "temperature": "warning"},
+          {"id": 8, "temperature": "well"}
         ],
        "work": 0,
        "time": "2022-12-30T06:00:25.16886"
@@ -65,14 +65,14 @@
       {"id": 4,
        "bearings": [
           {"id": 0, "vibration": "alarm", "temperature": "alarm"},
-          {"id": 0, "vibration": "well", "temperature": "well"},
-          {"id": 0, "temperature": "warning"},
-          {"id": 0, "temperature": "well"},
-          {"id": 0, "temperature": "well"},
-          {"id": 0, "temperature": "well"},
-          {"id": 0, "vibration": "well", "temperature": "well"},
-          {"id": 0, "vibration": "well", "temperature": "warning"},
-          {"id": 0, "temperature": "well"}
+          {"id": 1, "vibration": "well", "temperature": "well"},
+          {"id": 2, "temperature": "warning"},
+          {"id": 3, "temperature": "well"},
+          {"id": 4, "temperature": "well"},
+          {"id": 5, "temperature": "well"},
+          {"id": 6, "vibration": "well", "temperature": "well"},
+          {"id": 7, "vibration": "well", "temperature": "warning"},
+          {"id": 8, "temperature": "well"}
         ],
        "work": 1,
        "time": "2022-12-30T06:00:25.16886"
@@ -80,14 +80,14 @@
       {"id": 5,
        "bearings": [
           {"id": 0, "vibration": "alarm", "temperature": "alarm"},
-          {"id": 0, "vibration": "well", "temperature": "well"},
-          {"id": 0, "temperature": "warning"},
-          {"id": 0, "temperature": "well"},
-          {"id": 0, "temperature": "well"},
-          {"id": 0, "temperature": "well"},
-          {"id": 0, "vibration": "well", "temperature": "well"},
-          {"id": 0, "vibration": "well", "temperature": "warning"},
-          {"id": 0, "temperature": "well"}
+          {"id": 1, "vibration": "well", "temperature": "well"},
+          {"id": 2, "temperature": "warning"},
+          {"id": 3, "temperature": "well"},
+          {"id": 4, "temperature": "well"},
+          {"id": 5, "temperature": "well"},
+          {"id": 6, "vibration": "well", "temperature": "well"},
+          {"id": 7, "vibration": "well", "temperature": "warning"},
+          {"id": 8, "temperature": "well"}
         ],
        "work": 1,
        "time": "2022-12-30T06:00:25.16886"

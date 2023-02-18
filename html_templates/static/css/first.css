@@ -1,3 +1,40 @@
+.block_machines {
+  background-color: #6c757d;
+  border-radius: 2px;
+  color: white;
+  text-align: center;
+}
+.block_machines__exauster {
+  background-color: white;
+  border-radius: 2px;
+  border-color: black;
+  color: black;
+}
+.block_machines__exauster__img {
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  cursor: pointer;
+}
 
+.bearings .working__status {
+  border-radius: 1px;
+  border: solid #77787f;
+}
+.bearings .working__status--work {
+  background-color: green;
+}
+.bearings .working__status--nowork {
+  background-color: red;
+}
+.bearings__parameters {
+  margin-bottom: 10px;
+}
+.bearings__parameters__number {
+  border-radius: 5px;
+  border: solid #77787f;
+  background-color: #d7d8da;
+}
 
 /*# sourceMappingURL=first.css.map */
