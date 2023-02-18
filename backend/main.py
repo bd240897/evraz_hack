@@ -272,7 +272,74 @@ async def second_screen(exhauster_id):
     result = step()
     dictData = json.loads(result)
     dictData = dictData[''.join(('ex', str(exhauster_id)))]
-    return JSONResponse(content=dictData)
+    js = dictData
+    for k1, v1 in js.items():
+        # print(v1)
+        for k2, v2 in v1.items():
+            if k2 == 'temperature':
+                print('temp')
+                print(js[k1][k2])
+                js[k1][k2]['flag'] = 'norm'
+                if js[k1][k2]['value'] >= js[k1][k2]['temp_w_max'] or js[k1][k2]['value'] <= js[k1][k2][
+                    'temp_w_min']:
+                    js[k1][k2]['flag'] = 'warning'
+                if js[k1][k2]['value'] >= js[k1][k2]['temp_a_max'] or js[k1][k2]['value'] <= js[k1][k2][
+                    'temp_a_min']:
+                    js[k1][k2]['flag'] = 'alarm'
+                del js[k1][k2]['temp_w_max']
+                del js[k1][k2]['temp_w_min']
+                del js[k1][k2]['temp_a_max']
+                del js[k1][k2]['temp_a_min']
+
+            elif k2 == 'vibration_axial':
+                print('vibration_axial')
+                print(js[k1][k2])
+                js[k1][k2]['flag'] = 'norm'
+                if js[k1][k2]['value'] >= js[k1][k2]['vibration_a_w_max'] or js[k1][k2]['value'] <= \
+                        js[k1][k2][
+                            'vibration_a_w_min']:
+                    js[k1][k2]['flag'] = 'warning'
+                if js[k1][k2]['value'] >= js[k1][k2]['vibration_a_a_max'] or js[k1][k2]['value'] <= \
+                        js[k1][k2][
+                            'vibration_a_a_min']:
+                    js[k1][k2]['flag'] = 'alarm'
+                del js[k1][k2]['vibration_a_w_max']
+                del js[k1][k2]['vibration_a_w_min']
+                del js[k1][k2]['vibration_a_a_max']
+                del js[k1][k2]['vibration_a_a_min']
+            elif k2 == 'vibration_horizontal':
+                print('vibration_horizontal')
+                print(js[k1][k2])
+                js[k1][k2]['flag'] = 'norm'
+                if js[k1][k2]['value'] >= js[k1][k2]['vibration_h_w_max'] or js[k1][k2]['value'] <= \
+                        js[k1][k2][
+                            'vibration_h_w_min']:
+                    js[k1][k2]['flag'] = 'warning'
+                if js[k1][k2]['value'] >= js[k1][k2]['vibration_h_a_max'] or js[k1][k2]['value'] <= \
+                        js[k1][k2][
+                            'vibration_h_a_min']:
+                    js[k1][k2]['flag'] = 'alarm'
+                del js[k1][k2]['vibration_h_w_max']
+                del js[k1][k2]['vibration_h_w_min']
+                del js[k1][k2]['vibration_h_a_max']
+                del js[k1][k2]['vibration_h_a_min']
+            elif k2 == 'vibration_vertical':
+                print('vibration_vertical')
+                print(js[k1][k2])
+                js[k1][k2]['flag'] = 'norm'
+                if js[k1][k2]['value'] >= js[k1][k2]['vibration_v_w_max'] or js[k1][k2]['value'] <= \
+                        js[k1][k2][
+                            'vibration_v_w_min']:
+                    js[k1][k2]['flag'] = 'warning'
+                if js[k1][k2]['value'] >= js[k1][k2]['vibration_v_a_max'] or js[k1][k2]['value'] <= \
+                        js[k1][k2][
+                            'vibration_v_a_min']:
+                    js[k1][k2]['flag'] = 'alarm'
+                del js[k1][k2]['vibration_v_w_max']
+                del js[k1][k2]['vibration_v_w_min']
+                del js[k1][k2]['vibration_v_a_max']
+                del js[k1][k2]['vibration_v_a_min']
+    return JSONResponse(content=js)
 
 
 @app.websocket("/ws")
