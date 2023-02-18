@@ -1159,32 +1159,32 @@ oil_temperature_before_all = [
     oil_temperature_before6,
 ]
 
-water_temperature_after12 = [
+water_temperature_after1 = [
     "[2:37]",
 ]
-water_temperature_after12 = [
+water_temperature_after2 = [
     "[2:54]",
 ]
-water_temperature_after34 = [
+water_temperature_after3 = [
     "[0:37]",
 ]
-water_temperature_after34 = [
+water_temperature_after4 = [
     "[0:54]",
 ]
-water_temperature_after56 = [
+water_temperature_after5 = [
     "[3:37]",
 ]
-water_temperature_after56 = [
+water_temperature_after6 = [
     "[3:54]",
 ]
 
 water_temperature_after_all = [
-    water_temperature_after12,
-    water_temperature_after12,
-    water_temperature_after34,
-    water_temperature_after34,
-    water_temperature_after56,
-    water_temperature_after56,
+    water_temperature_after1,
+    water_temperature_after2,
+    water_temperature_after3,
+    water_temperature_after4,
+    water_temperature_after5,
+    water_temperature_after6,
 ]
 
 water_temperature_before1 = [
@@ -1607,12 +1607,12 @@ datafile_othr = [
 
     [gas_valve_closed_all, "valve_position","gas_valve_closed"],
     [gas_valve_open_all, "valve_position","gas_valve_open"],
-    [gas_valve_position_all, "valve_position","gas_valve_position"],
+#    [gas_valve_position_all, "valve_position","gas_valve_position"], # 4:6 # 4:13
 
-    [rotor_current_all, "main_drive","rotor_current"],
-    [rotor_voltage_all, "main_drive","rotor_voltage"],
+#    [rotor_current_all, "main_drive","rotor_current"], #4:2
+#    [rotor_voltage_all, "main_drive","rotor_voltage"], #4:11
     [stator_current_all, "main_drive","stator_current"],
-    [stator_voltage_all, "main_drive","stator_voltage"],
+#    [stator_voltage_all, "main_drive","stator_voltage"], #4:5
 
     [oil_level_all, "oil_system","oil_level"],
     [oil_pressure_all, "oil_system","oil_pressure"],

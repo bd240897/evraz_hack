@@ -44,6 +44,7 @@ def update_json_vibr(database, category, value ,data, message):
             q += 1
             j += 1
             if j == 9: break
+    return data
 
 def update_json_othr(database, category, value ,data, message):
     for k in range(len(database)):    
@@ -51,13 +52,15 @@ def update_json_othr(database, category, value ,data, message):
         q = 1
         for i in  ((database[k])):
             index = str(database[k][j][1:-1])
-            regexdata = re.search((r'' + (index) + r'\]\": \d+.\d+'), message)
-            regexdata2 = re.search(r' \d+.\d+' ,regexdata[0])
+            regexdata = re.search((r'' + (index) + r'\]\": -?\d+\.\d+'), message)
+            print (index, regexdata)
+            regexdata2 = re.search(r' -?\d+\.\d+' ,regexdata[0])
             data["ex" + str(k+1)][category][value] = regexdata2[0]
             
             q += 1
             j += 1
             if j == 9: break
+    return data
 
 ## functions
 
@@ -93,7 +96,11 @@ for message in consumer:
     #result = re.search(r'\[0:27\]\s\d+\.\d+',m_d)
     for z in datafile_temp:
         update_json_temp(z[0], z[1], z[2] ,data, m_d)
-    # for z in datafile_vibr:
-    #     update_json_temp(z[0], z[1], z[2] ,data, m_d)
 
+    for z in datafile_vibr:
+        update_json_vibr(z[0], z[1], z[2] ,data, m_d)
+
+    for z in datafile_othr:
+        update_json_othr(z[0], z[1], z[2] ,data, m_d)
+        
     print ((dumps(data)))
