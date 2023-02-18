@@ -15,15 +15,16 @@ export default ({
         },
     },
     actions: {
-        GET_SECOND_DATA({commit, rootState}, {url = this.state.SECOND_SCREEN_URL,}) {
+        GET_SECOND_DATA({commit, rootState}, {id, url = this.state.SECOND_SCREEN_URL,}) {
             /**
              Получает данные для первой страницы
              */
-            axios.get(url)
+            console.log(id)
+            axios.get(url, {params: {id: id}})
                 .then(function (x) {
                     console.log(x.data)
                     console.log('SUCCESS!!');
-                    commit('SET_SECOND_DATA', x.data)
+                    commit('SET_SECOND_DATA', x.data[0]) // TODO [0] только для json-server
                 })
                 .catch(err => {
                     console.log(err)

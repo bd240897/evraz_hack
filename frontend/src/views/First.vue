@@ -13,7 +13,9 @@
 
           <h2 class="exauster__name">Exauster #{{ index + 1 }}</h2>
           <img class="exauster__img"
-               src="https://www.aircontrolindustries.com/wp-content/uploads/2019/04/Compressor-60hz-2.jpg" alt="">
+               src="https://www.aircontrolindustries.com/wp-content/uploads/2019/04/Compressor-60hz-2.jpg" alt=""
+               v-on:click="goToSecond(index)"
+          >
 
           <!--Подшипники-->
           <div class="exauster__body">>
@@ -22,17 +24,18 @@
             <div class="exauster__body__bearings"
                  v-for="(bearing, index) in item.bearings">
 
-               <!--Параметры-->
+              <!--Параметры-->
               <div class="exauster__body__bearings__bearing">
                 <div class="exauster__body__bearings__bearing__header"># {{ index }}</div>
                 <div class="exauster__body__bearings__bearing__temperature alert"
-                   v-bind:class="{'alert-warning': isWarning(bearing.temperature)}"
-                   :class="{'alert-danger': isAlarm(bearing.temperature)}"
+                     v-bind:class="{'alert-warning': isWarning(bearing.temperature)}"
+                     :class="{'alert-danger': isAlarm(bearing.temperature)}"
                 >
-                  Temperature: {{ bearing.temperature }}</div>
+                  Temperature: {{ bearing.temperature }}
+                </div>
                 <div class="exauster__body__bearings__bearing__vibration alert"
-                   v-bind:class="{'alert-danger': isWarning(bearing.vibration)}"
-                   :class="{'alert-danger': isAlarm(bearing.vibration)}"
+                     v-bind:class="{'alert-danger': isWarning(bearing.vibration)}"
+                     :class="{'alert-danger': isAlarm(bearing.vibration)}"
                 >
                   Vibrations: {{ bearing.vibration }}
                 </div>
@@ -47,6 +50,11 @@
     </div>
   </section>
 
+  <!--TODO delete -->
+  <div class="open-wallet d-flex justify-content-center mb-3">
+    <button v-on:click="goToSecond(2)" class="button_item btn btn-primary py-3 p" type="submit">goToSecond</button>
+  </div>
+
   <Footer/>
 </template>
 
@@ -55,6 +63,7 @@ import goToSomewhere from "@/mixins/goToSomewhere";
 import {mapActions, mapState} from "vuex";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
 export default {
   name: "First",
   components: {
@@ -100,6 +109,7 @@ html, body
     &__img
       height: auto
       width: 100%
+      cursor: pointer
 
     &__body
       &__header

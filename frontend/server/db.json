@@ -1,5 +1,6 @@
 {
   "get-first-screen": {
+    "_comment": "Первый экран получает данные сразу для всех эксгаустеров",
     "exausters": [
       {"id": 0,
        "bearings": [
@@ -13,7 +14,8 @@
           {"id": 0, "vibration": "well", "temperature": "warning"},
           {"id": 0, "temperature": "well"}
         ],
-       "work": 1
+       "work": 1,
+       "time": "2022-12-30T06:00:25.16886"
       },
       {"id": 1,
        "bearings": [
@@ -27,7 +29,8 @@
           {"id": 0, "vibration": "well", "temperature": "warning"},
           {"id": 0, "temperature": "well"}
         ],
-       "work": 1
+       "work": 1,
+       "time": "2022-12-30T06:00:25.16886"
       },
       {"id": 2,
        "bearings": [
@@ -41,7 +44,8 @@
           {"id": 0, "vibration": "well", "temperature": "warning"},
           {"id": 0, "temperature": "well"}
         ],
-       "work": 1
+       "work": 1,
+       "time": "2022-12-30T06:00:25.16886"
       },
       {"id": 3,
        "bearings": [
@@ -55,7 +59,8 @@
           {"id": 0, "vibration": "well", "temperature": "warning"},
           {"id": 0, "temperature": "well"}
         ],
-       "work": 1
+       "work": 1,
+       "time": "2022-12-30T06:00:25.16886"
       },
       {"id": 4,
        "bearings": [
@@ -69,7 +74,8 @@
           {"id": 0, "vibration": "well", "temperature": "warning"},
           {"id": 0, "temperature": "well"}
         ],
-       "work": 1
+       "work": 1,
+       "time": "2022-12-30T06:00:25.16886"
       },
       {"id": 5,
        "bearings": [
@@ -83,13 +89,381 @@
           {"id": 0, "vibration": "well", "temperature": "warning"},
           {"id": 0, "temperature": "well"}
         ],
-       "work": 1
+       "work": 1,
+       "time": "2022-12-30T06:00:25.16886"
       }
     ]},
 
-  "get-second-screen": {
-    "exausters": [
-      {"id": 0,
+  "get-second-screen": [
+    {
+      "id": 0,
+      "bearings": [
+        {"id": 0,
+          "vibrations": {
+            "axial_value": 12,
+            "vertical_value": 11,
+            "horizontal_value": 10,
+            "status": "alarm"
+          },
+          "temperature": {
+            "value": 5,
+            "status": "warning"
+          }
+        },
+        {"id": 1,
+          "vibrations": {
+            "axial_value": 12,
+            "vertical_value": 11,
+            "horizontal_value": 10,
+            "status": "alarm"
+          },
+
+          "temperature": {
+            "value": 5,
+            "status": "alarm"
+          }
+        },
+        {"id": 2,
+          "temperature": {
+            "value": 5,
+            "status": "alarm"
+          }
+        },
+        {"id": 3,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        },
+        {"id": 4,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        },
+        {"id": 5,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        },
+        {"id": 6,
+          "vibrations": {
+            "axial_value": 12,
+            "vertical_value": 11,
+            "horizontal_value": 10,
+            "status": "alarm"
+          },
+
+          "temperature": {
+            "value": 5,
+            "status": "alarm"
+          }
+        },
+        {"id": 7,
+          "vibrations": {
+            "axial_value": 12,
+            "vertical_value": 11,
+            "horizontal_value": 10,
+            "status": "warning"
+          },
+
+          "temperature": {
+            "value": 5,
+            "status": "warning"
+          }
+        },
+        {"id": 8,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        },
+        {"id": 9,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        }
+      ],
+      "work": 1,
+      "colder":{
+          "oil": {
+              "temp_after": 1234,
+              "temp_before": 1234
+          },
+          "water": {
+              "temp_after": 1234,
+              "temp_before": 1234
+          }
+      },
+      "gas_collector":{
+          "temp_before": 1234,
+          "undpress_before": 1234
+      },
+      "valve_position":{
+          "gas_valve_closed": 1,
+          "gas_valve_open": 2,
+          "gas_valve_position": 3
+      },
+      "main_drive":{
+          "rotor_current": 1,
+          "rotor_voltage": 2,
+          "stator_current": 3,
+          "stator_voltage": 4
+      },
+      "oil_system": {
+          "oil_level": 2,
+          "oil_pressure": 4
+      },
+      "_comment": "Второй экран получает данные только для одного эксгаустера, тут их несколько чтоб я мог сделать фейковый переходы между страницами"
+    },
+    {
+      "id": 1,
+      "bearings": [
+        {"id": 0,
+          "vibrations": {
+            "axial_value": 12,
+            "vertical_value": 11,
+            "horizontal_value": 10,
+            "status": "well"
+          },
+          "temperature": {
+            "value": 5,
+            "status": "warning"
+          }
+        },
+        {"id": 1,
+          "vibrations": {
+            "axial_value": 12,
+            "vertical_value": 11,
+            "horizontal_value": 10,
+            "status": "alarm"
+          },
+
+          "temperature": {
+            "value": 5,
+            "status": "alarm"
+          }
+        },
+        {"id": 2,
+          "temperature": {
+            "value": 5,
+            "status": "alarm"
+          }
+        },
+        {"id": 3,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        },
+        {"id": 4,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        },
+        {"id": 5,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        },
+        {"id": 6,
+          "vibrations": {
+            "axial_value": 12,
+            "vertical_value": 11,
+            "horizontal_value": 10,
+            "status": "alarm"
+          },
+
+          "temperature": {
+            "value": 5,
+            "status": "alarm"
+          }
+        },
+        {"id": 7,
+          "vibrations": {
+            "axial_value": 12,
+            "vertical_value": 11,
+            "horizontal_value": 10,
+            "status": "warning"
+          },
+
+          "temperature": {
+            "value": 5,
+            "status": "warning"
+          }
+        },
+        {"id": 8,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        },
+        {"id": 9,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        }
+      ],
+      "work": 1,
+      "colder":{
+          "oil": {
+              "temp_after": 1234,
+              "temp_before": 1234
+          },
+          "water": {
+              "temp_after": 1234,
+              "temp_before": 1234
+          }
+      },
+      "gas_collector":{
+          "temp_before": 1234,
+          "undpress_before": 1234
+      },
+      "valve_position":{
+          "gas_valve_closed": 1,
+          "gas_valve_open": 2,
+          "gas_valve_position": 3
+      },
+      "main_drive":{
+          "rotor_current": 1,
+          "rotor_voltage": 2,
+          "stator_current": 3,
+          "stator_voltage": 4
+      },
+      "oil_system": {
+          "oil_level": 2,
+          "oil_pressure": 4
+      }
+    },
+    {
+      "id": 2,
+      "bearings": [
+        {"id": 0,
+          "vibrations": {
+            "axial_value": 12,
+            "vertical_value": 11,
+            "horizontal_value": 10,
+            "status": "alarm"
+          },
+          "temperature": {
+            "value": 5,
+            "status": "warning"
+          }
+        },
+        {"id": 1,
+          "vibrations": {
+            "axial_value": 12,
+            "vertical_value": 11,
+            "horizontal_value": 10,
+            "status": "alarm"
+          },
+
+          "temperature": {
+            "value": 5,
+            "status": "alarm"
+          }
+        },
+        {"id": 2,
+          "temperature": {
+            "value": 5,
+            "status": "alarm"
+          }
+        },
+        {"id": 3,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        },
+        {"id": 4,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        },
+        {"id": 5,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        },
+        {"id": 6,
+          "vibrations": {
+            "axial_value": 12,
+            "vertical_value": 11,
+            "horizontal_value": 10,
+            "status": "alarm"
+          },
+
+          "temperature": {
+            "value": 5,
+            "status": "alarm"
+          }
+        },
+        {"id": 7,
+          "vibrations": {
+            "axial_value": 12,
+            "vertical_value": 11,
+            "horizontal_value": 10,
+            "status": "warning"
+          },
+
+          "temperature": {
+            "value": 5,
+            "status": "warning"
+          }
+        },
+        {"id": 8,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        },
+        {"id": 9,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        }
+      ],
+      "work": 0,
+      "colder":{
+          "oil": {
+              "temp_after": 1234,
+              "temp_before": 1234
+          },
+          "water": {
+              "temp_after": 1234,
+              "temp_before": 1234
+          }
+      },
+      "gas_collector":{
+          "temp_before": 1234,
+          "undpress_before": 1234
+      },
+      "valve_position":{
+          "gas_valve_closed": 1,
+          "gas_valve_open": 2,
+          "gas_valve_position": 3
+      },
+      "main_drive":{
+          "rotor_current": 1,
+          "rotor_voltage": 2,
+          "stator_current": 3,
+          "stator_voltage": 4
+      },
+      "oil_system": {
+          "oil_level": 2,
+          "oil_pressure": 4
+      }
+    },
+    {
+      "id": 3,
       "bearings": [
         {"id": 0,
           "vibrations": {
@@ -209,6 +583,251 @@
           "oil_level": 2,
           "oil_pressure": 4
       }
+    },
+    {
+      "id": 4,
+      "bearings": [
+        {"id": 0,
+          "vibrations": {
+            "axial_value": 12,
+            "vertical_value": 11,
+            "horizontal_value": 10,
+            "status": "alarm"
+          },
+          "temperature": {
+            "value": 5,
+            "status": "warning"
+          }
+        },
+        {"id": 1,
+          "vibrations": {
+            "axial_value": 12,
+            "vertical_value": 11,
+            "horizontal_value": 10,
+            "status": "alarm"
+          },
+
+          "temperature": {
+            "value": 5,
+            "status": "alarm"
+          }
+        },
+        {"id": 2,
+          "temperature": {
+            "value": 5,
+            "status": "alarm"
+          }
+        },
+        {"id": 3,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        },
+        {"id": 4,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        },
+        {"id": 5,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        },
+        {"id": 6,
+          "vibrations": {
+            "axial_value": 12,
+            "vertical_value": 11,
+            "horizontal_value": 10,
+            "status": "alarm"
+          },
+
+          "temperature": {
+            "value": 5,
+            "status": "alarm"
+          }
+        },
+        {"id": 7,
+          "vibrations": {
+            "axial_value": 12,
+            "vertical_value": 11,
+            "horizontal_value": 10,
+            "status": "warning"
+          },
+
+          "temperature": {
+            "value": 5,
+            "status": "warning"
+          }
+        },
+        {"id": 8,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        },
+        {"id": 9,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        }
+      ],
+      "work": 1,
+      "colder":{
+          "oil": {
+              "temp_after": 1234,
+              "temp_before": 1234
+          },
+          "water": {
+              "temp_after": 1234,
+              "temp_before": 1234
+          }
+      },
+      "gas_collector":{
+          "temp_before": 1234,
+          "undpress_before": 1234
+      },
+      "valve_position":{
+          "gas_valve_closed": 1,
+          "gas_valve_open": 2,
+          "gas_valve_position": 3
+      },
+      "main_drive":{
+          "rotor_current": 1,
+          "rotor_voltage": 2,
+          "stator_current": 3,
+          "stator_voltage": 4
+      },
+      "oil_system": {
+          "oil_level": 2,
+          "oil_pressure": 4
       }
-    ]}
+    },
+    {
+      "id": 5,
+      "bearings": [
+        {"id": 0,
+          "vibrations": {
+            "axial_value": 12,
+            "vertical_value": 11,
+            "horizontal_value": 10,
+            "status": "alarm"
+          },
+          "temperature": {
+            "value": 5,
+            "status": "warning"
+          }
+        },
+        {"id": 1,
+          "vibrations": {
+            "axial_value": 12,
+            "vertical_value": 11,
+            "horizontal_value": 10,
+            "status": "alarm"
+          },
+
+          "temperature": {
+            "value": 5,
+            "status": "alarm"
+          }
+        },
+        {"id": 2,
+          "temperature": {
+            "value": 5,
+            "status": "alarm"
+          }
+        },
+        {"id": 3,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        },
+        {"id": 4,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        },
+        {"id": 5,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        },
+        {"id": 6,
+          "vibrations": {
+            "axial_value": 12,
+            "vertical_value": 11,
+            "horizontal_value": 10,
+            "status": "alarm"
+          },
+
+          "temperature": {
+            "value": 5,
+            "status": "alarm"
+          }
+        },
+        {"id": 7,
+          "vibrations": {
+            "axial_value": 12,
+            "vertical_value": 11,
+            "horizontal_value": 10,
+            "status": "warning"
+          },
+
+          "temperature": {
+            "value": 5,
+            "status": "warning"
+          }
+        },
+        {"id": 8,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        },
+        {"id": 9,
+          "temperature": {
+            "value": 5,
+            "status": "well"
+          }
+        }
+      ],
+      "work": 1,
+      "colder":{
+          "oil": {
+              "temp_after": 1234,
+              "temp_before": 1234
+          },
+          "water": {
+              "temp_after": 1234,
+              "temp_before": 1234
+          }
+      },
+      "gas_collector":{
+          "temp_before": 1234,
+          "undpress_before": 1234
+      },
+      "valve_position":{
+          "gas_valve_closed": 1,
+          "gas_valve_open": 2,
+          "gas_valve_position": 3
+      },
+      "main_drive":{
+          "rotor_current": 1,
+          "rotor_voltage": 2,
+          "stator_current": 3,
+          "stator_voltage": 4
+      },
+      "oil_system": {
+          "oil_level": 2,
+          "oil_pressure": 4
+      }
+    }
+  ]
+
 }

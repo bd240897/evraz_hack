@@ -17,7 +17,7 @@ const routes = [
         component: First
     },
     {
-        path: '/second-screen',
+        path: '/second-screen/:id',
         name: 'Second',
         component: Second
     },

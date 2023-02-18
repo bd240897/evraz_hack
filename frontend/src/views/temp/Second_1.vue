@@ -3,43 +3,30 @@
 
   <h1 class="screen-name text-center">Второй экран</h1>
 
-  <!--  {{this.$route.params.id}}-->
+  {{this.$route.params.id}}
 
   <section class="exausters">
     <div class="container">
       <div class="row">
         <!--Эксгаустер-->
-        <div class="exauster">
-
-          <!--TODO delete -->
-          <div class="open-wallet d-flex justify-content-center mb-3">
-            <button v-on:click="goToFirst" class="button_item btn btn-primary py-3 p" type="submit">
-              goToFirst
-            </button>
-          </div>
+        <div class="exauster col-2"
+             v-for="(item, index) in secondData.exausters">
 
 
-          <div class="col-6">
-            <h2 class="exauster__name">Exauster #{{ secondData.id + 1 }}</h2>
-            <img class="exauster__img"
-                 src="https://www.aircontrolindustries.com/wp-content/uploads/2019/04/Compressor-60hz-2.jpg" alt="">
-          </div>
+          <h2 class="exauster__name">Exauster #{{ index + 1 }}</h2>
+          <img class="exauster__img"
+               src="https://www.aircontrolindustries.com/wp-content/uploads/2019/04/Compressor-60hz-2.jpg" alt="">
 
-          <div class="exauster__body row mb-2">>
+          <!--Подшипники-->
+          <div class="exauster__body">>
             <h3 class="exauster__body__header">Все подшипники</h3>
 
-            <div>
-              Work: {{ secondData.work }}
-            </div>
-
-            <!--Подшипники-->
-            <div class="exauster__body__bearings border border-primary col-3"
-                 v-for="(bearing, index) in secondData.bearings">
+            <div class="exauster__body__bearings"
+                 v-for="(bearing, index) in item.bearings">
 
               <!--Параметры-->
               <div class="exauster__body__bearings__bearing">
                 <div class="exauster__body__bearings__bearing__header"># {{ index }}</div>
-
 
                 <div class="exauster__body__bearings__bearing__temperature alert"
                      v-bind:class="{'alert-warning': isWarning(bearing.temperature.status)}"
