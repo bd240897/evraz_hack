@@ -11,6 +11,26 @@
         <!--Эксгаустер-->
         <div class="exauster">
 
+          <select v-model="selected_exauster">
+            <option v-for="option in selectData.options_exauster" v-bind:value="option.value">
+              {{ option.text }}
+            </option>
+          </select>
+          <select v-model="selected_bearing">
+            <option v-for="option in selectData.options_bearing" v-bind:value="option.value">
+              {{ option.text }}
+            </option>
+          </select>
+          <select v-model="selected_feature">
+            <option v-for="option in selectData.options_feature" v-bind:value="option.value">
+              {{ option.text }}
+            </option>
+          </select>
+
+          <span>Выбрано: {{ selected }}</span>
+
+<!--          {{this.thirdData}}-->
+
           1234
         </div>
       </div>
@@ -19,7 +39,7 @@
 
   <LineChart :chartData="chartData"/>
 
-    <!--TODO delete -->
+  <!--TODO delete -->
   <div class="open-wallet d-flex justify-content-center mb-3">
     <button v-on:click="setFirstData" class="button_item btn btn-primary py-3 p" type="submit">FirstData</button>
     <button v-on:click="setSecondData" class="button_item btn btn-primary py-3 p" type="submit">SecondData</button>
@@ -63,7 +83,44 @@ export default {
           },
         ]
       },
+
+      // форма выбора
+      selectData: {
+        options_exauster: [
+          {text: 1, value: 1},
+        ],
+        options_bearing: [
+          {text: 1, value: 1},
+          {text: 2, value: 2},
+          {text: 3, value: 3},
+          {text: 4, value: 4},
+          {text: 5, value: 5},
+          {text: 6, value: 6},
+          {text: 7, value: 7},
+          {text: 8, value: 8},
+          {text: 9, value: 9},
+        ],
+        options_feature: [
+          {text: 'Temperature', value: "temperature"},
+          {text: 'Vibration', value: "vibration"},
+        ]
+      },
+      selected_exauster: 1,
+      selected_bearing: 1,
+      selected_feature: "temperature",
     }
+  },
+  watch: {
+    selected_exauster: function () {
+      console.log("selected ")
+    },
+    selected_bearing: function () {
+      console.log("selected ")
+      this.filterData()
+    },
+    selected_feature: function () {
+      console.log("selected ")
+    },
   },
   computed: {
     ...mapState('third', ['thirdData',]),
@@ -76,7 +133,22 @@ export default {
     isAlarm(str) {
       return str === 'alarm'
     },
-    setFirstData(){
+    filterData() {
+      this.chartData = {
+        labels: this.thirdData.data,
+        datasets: [
+          {
+            label: "" + this.selected_exauster + this.selected_bearing + this.selected_feature,
+            backgroundColor: '#253bfc',
+            data: this.thirdData.bearings[parseInt(this.selected_bearing)][this.selected_feature].value
+          },
+        ]
+      }
+      // let a = this.thirdData.bearings[parseInt(this.selected_bearing)][this.selected_feature].value
+      // console.log(a)
+    },
+
+    setFirstData() {
       this.chartData = {
         labels: ['January', 'February', 'March'],
         datasets: [
@@ -88,7 +160,7 @@ export default {
         ]
       }
     },
-    setSecondData(){
+    setSecondData() {
       this.chartData = {
         labels: ['January', 'February', 'March'],
         datasets: [

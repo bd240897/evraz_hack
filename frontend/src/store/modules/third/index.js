@@ -11,7 +11,7 @@ export default ({
     getters: {},
     mutations: {
         SET_THIRD_DATA(state, data) {
-            state.secondData = data
+            state.thirdData = data
         },
     },
     actions: {
@@ -24,7 +24,7 @@ export default ({
                 .then(function (x) {
                     console.log(x.data)
                     console.log('SUCCESS!!');
-                    commit('SET_THIRD_DATA', x.data) // TODO [0] только для json-server
+                    commit('SET_THIRD_DATA', x.data[0]) // TODO [0] только для json-server
                 })
                 .catch(err => {
                     console.log(err)
