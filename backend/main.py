@@ -126,11 +126,10 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI()
 
 
-@app.get("/")
-def read_root():
-    html_content = "<h2>Hello METANIT.COM!</h2>"
-    return HTMLResponse(content=html_content)
-
+# @app.get("/")
+# def read_root():
+#     html_content = "<h2>Hello METANIT.COM!</h2>"
+#     return HTMLResponse(content=html_content)
 
 
 html = """
@@ -171,6 +170,22 @@ html = """
 @app.get("/")
 async def get():
     return HTMLResponse(html)
+
+
+@app.post("/")
+async def post():
+    pass
+#get data from kafka
+
+
+@app.get("/get-first-screen")
+async def first_screen():
+    pass
+
+
+@app.get("/get-second-screen/{exhauster_id}")
+async def second_screen(exhauster_id):
+    pass
 
 
 @app.websocket("/ws")
