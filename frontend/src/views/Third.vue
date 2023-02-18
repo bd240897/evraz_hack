@@ -105,6 +105,7 @@ export default {
           {text: 'Vibration', value: "vibration"},
         ]
       },
+
       selected_exauster: 1,
       selected_bearing: 1,
       selected_feature: "temperature",
@@ -144,8 +145,6 @@ export default {
           },
         ]
       }
-      // let a = this.thirdData.bearings[parseInt(this.selected_bearing)][this.selected_feature].value
-      // console.log(a)
     },
 
     setFirstData() {
@@ -177,6 +176,7 @@ export default {
   },
   created() {
     this.GET_THIRD_DATA({})
+    // this.filterData()
   },
 }
 </script>

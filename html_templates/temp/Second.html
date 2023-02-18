@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="static/bootstrap-5.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/second.css" rel="stylesheet">
+</head>
+<body>
+<h1 class="screen-name text-center">Второй экран</h1>
+
+
+<style>
+
+</style>
+
+<section class="second_screen">
+
+    <div class="line_1 d-flex justify-content-end">
+        <div class="temperature_oil_out d-flex mx-3">
+            <div class="temperature_oil_out__block d-flex align-items-center flex-column">
+                <img class="temperature_oil_out__block__img" src="./static/img/first/стрелка вверх.png" alt="">
+                <div class="temperature_oil_out__block__sensor bg-success border border-primary rounded rounded-3">
+                    -233 C
+                </div>
+                <img class="temperature_oil_out__block__img" src="./static/img/first/стрелка точка.png" alt="">
+            </div>
+        </div>
+
+        <div class="temperature_oil_out d-flex mx-3">
+            <div class="temperature_oil_out__block d-flex align-items-center flex-column">
+                <img class="temperature_oil_out__block__img" src="./static/img/first/стрелка вверх.png" alt="">
+                <div class="temperature_oil_out__block__sensor bg-success border border-primary rounded rounded-3">
+                    -233 C
+                </div>
+                <img class="temperature_oil_out__block__img" src="./static/img/first/стрелка вниз.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="line_2 d-flex">
+        <div class="gas bg-success mx-1">
+            <p>Температура газа, °С 45</p>
+            <p>Разряжение, мм. в. ст 74,3</p>
+            <p>Уровень пыли, мг/м³ 15</p>
+        </div>
+
+        <div class="oil bg-success ms-1">
+            <p>Маслобак
+            <p>
+            <p>Уровень масла, % 34,3
+            <p>
+        </div>
+
+        <div class="horizontal_pipe d-flex flex-column justify-content-center">
+            <img src="./static/img/first/труба гориз.png" alt="">
+        </div>
+
+        <div class="oil_input bg-success">
+            -233, °С
+        </div>
+
+        <div class="horizontal_pipe d-flex flex-column justify-content-center">
+            <img src="./static/img/first/труба гориз.png" alt="">
+        </div>
+
+
+        <div class="freezer bg-success me-1 d-flex justify-content-center">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                Охладитель
+                <img class="freezer__img" src="./static/img/first/спираль.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="line_3 d-flex">
+        <div class="vertical_funnel d-flex flex-column justify-content-center">
+            <img src="./static/img/first/воронка нижняя.png" alt="">
+        </div>
+
+        <div class="vertical_pipe d-flex flex-column justify-content-center">
+            <img src="./static/img/first/труба вертик.png" alt="">
+        </div>
+
+        <div class="horizontal_pipe d-flex flex-column justify-content-center">
+            <img src="./static/img/first/труба гориз.png" alt="">
+        </div>
+
+        <div class="temperature_input d-flex flex-column justify-content-center bg-success">
+            233
+        </div>
+
+        <div class="horizontal_pipe d-flex flex-column justify-content-center">
+            <img src="./static/img/first/труба гориз.png" alt="">
+        </div>
+
+        <div class="oil_presure bg-success">
+            <p>Давление масла, кг/см² 2.5</p>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+</section>
+
+
+<!--  {{this.$route.params.id}}-->
+
+<!--<section class="exausters">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            &lt;!&ndash;Эксгаустер&ndash;&gt;-->
+<!--            <div class="exauster">-->
+
+<!--                &lt;!&ndash;TODO delete &ndash;&gt;-->
+<!--                <div class="open-wallet d-flex justify-content-center mb-3">-->
+<!--                    <button v-on:click="goToFirst" class="button_item btn btn-primary py-3 p" type="submit">-->
+<!--                        goToFirst-->
+<!--                    </button>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash;Фото машины&ndash;&gt;-->
+<!--                <div class="col-6">-->
+<!--                    <h2 class="exauster__name">Exauster #{{ secondData.id + 1 }}</h2>-->
+<!--                    <img class="exauster__img"-->
+<!--                         src="https://www.aircontrolindustries.com/wp-content/uploads/2019/04/Compressor-60hz-2.jpg"-->
+<!--                         alt="">-->
+<!--                </div>-->
+
+<!--                <div class="exauster__body row mb-2">>-->
+
+<!--                    <h3 class="exauster__body__header">Все подшипники</h3>-->
+
+<!--                    &lt;!&ndash;Статус работы&ndash;&gt;-->
+<!--                    <div class="exauster__parameter">-->
+<!--                        <div v-if="secondData.work" class="exauster__parameter__work&#45;&#45;yes">-->
+<!--                            Работает-->
+<!--                        </div>-->
+<!--                        <div v-else class="exauster__parameter__work&#45;&#45;no">-->
+<!--                            Не работает-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    &lt;!&ndash;Подшипники&ndash;&gt;-->
+<!--                    <div class="exauster__body__bearings border border-primary col-3"-->
+<!--                         v-for="(bearing, index) in secondData.bearings">-->
+
+<!--                        &lt;!&ndash;Параметры&ndash;&gt;-->
+<!--                        <div class="exauster__body__bearings__bearing">-->
+<!--                            <div class="exauster__body__bearings__bearing__header"># {{ index }}</div>-->
+
+
+<!--                            &lt;!&ndash;Температура&ndash;&gt;-->
+<!--                            <div class="exauster__body__bearings__bearing__temperature alert"-->
+<!--                                 v-bind:class="{'alert-warning': isWarning(bearing.temperature.status),-->
+<!--                                    'alert-danger': isAlarm(bearing.temperature.status)}"-->
+<!--                            >-->
+<!--                                <p>Temperature: {{ bearing.temperature.value }}</p>-->
+<!--                                <p>Status: {{ bearing.temperature.status }}</p>-->
+<!--                            </div>-->
+
+<!--                            &lt;!&ndash;Вибрация&ndash;&gt;-->
+<!--                            <div class="exauster__body__bearings__bearing__vibration alert"-->
+<!--                                 v-if="bearing.vibrations"-->
+<!--                                 v-bind:class="{'alert-warning': isWarning(bearing.vibrations.status),-->
+<!--                                    'alert-danger': isAlarm(bearing.vibrations.status)}"-->
+<!--                            >-->
+<!--                                <p>Vibrations A: {{ bearing.vibrations.axial_value }}</p>-->
+<!--                                <p>Vibrations V: {{ bearing.vibrations.vertical_value }}</p>-->
+<!--                                <p>ibrations H: {{ bearing.vibrations.horizontal_value }}</p>-->
+<!--                                <p>Status: {{ bearing.vibrations.status }}</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+
+<!--                </div>-->
+
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!-- СКРИПТЫ -->
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
+<script type="text/javascript" src="static/jquery/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="static/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="static/jquery-tmpl/js/jquery.tmpl.1.0.0.js"></script>
+<!--<script src="static/js/login.js"></script>-->
+
+</body>
+</html>
