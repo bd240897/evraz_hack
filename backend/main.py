@@ -31,26 +31,53 @@ class Exhauster(Base):
 class Colder(Base):
     __tablename__ = "colder"
     id = mapped_column(Integer, primary_key=True)
+    colder_liquids: Mapped[List["ColderLiquid"]] = relationship(back_populates="colder")
+    exhauster_id = mapped_column(ForeignKey("exhauster.id"))
+    exhauster = relationship("Exhauster", back_populates="colder")
+
+
+class ColderLiquid(Base):
+    __tablename__ = "colder"
+    id = mapped_column(Integer, primary_key=True)
+    type = mapped_column(String(30))
+    temp_after = mapped_column(Float)
+    temp_before = mapped_column(Float)
+    colder = relationship("Colder", back_populates="colder_liquids")
 
 
 class GasCollector(Base):
     __tablename__ = "gas_collector"
     id = mapped_column(Integer, primary_key=True)
+    temp_before = mapped_column(Float)
+    undpress_before = mapped_column(Float)
+    exhauster = relationship("Exhauster", back_populates="gas_collector")
 
 
 class ValvePosition(Base):
     __tablename__ = "valve_position"
     id = mapped_column(Integer, primary_key=True)
+    gas_valve_closed = mapped_column(String(30))
+    gas_valve_open = mapped_column(String(30))
+    gas_valve_position = mapped_column(String(30))
+    exhauster = relationship("Exhauster", back_populates="valve_position")
 
 
 class MainDrive(Base):
     __tablename__ = "main_drive"
     id = mapped_column(Integer, primary_key=True)
+    rotor_current = mapped_column(String(30))
+    rotor_voltage = mapped_column(String(30))
+    stator_current = mapped_column(String(30))
+    stator_voltage = mapped_column(String(30))
+    exhauster = relationship("Exhauster", back_populates="main_drive")
 
 
 class OilSystem(Base):
     __tablename__ = "oil_system"
     id = mapped_column(Integer, primary_key=True)
+    oil_level = mapped_column(String(30))
+    oil_pressure = mapped_column(String(30))
+    exhauster = relationship("Exhauster", back_populates="oil_system")
 
 
 class Bearing(Base):
