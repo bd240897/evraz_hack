@@ -7,4 +7,5 @@ services:
     command: npm run both
 #    command: http-server dist --port 80
     ports:
-      - "80:80"
+      - "3004:3004"
+      - "8080:8080"
