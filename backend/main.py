@@ -10,6 +10,7 @@ from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
 from sqlalchemy.orm import relationship
+from sqlalchemy.orm import sessionmaker
 
 
 class Base(DeclarativeBase):
@@ -33,9 +34,11 @@ class Colder(Base):
     __table_args__ = {'extend_existing': True}
     id = mapped_column(Integer, primary_key=True)
     colder_liquids: Mapped[List["ColderLiquid"]] = relationship(back_populates="colder")
-    exhauster_id = mapped_column(ForeignKey("exhauster.id"))
+    exhauster_id = mapped_column(Integer, ForeignKey("exhauster.id"))
     exhauster = relationship("Exhauster", back_populates="colder")
 
+
+#back_populates поменять backref
 
 class ColderLiquid(Base):
     __tablename__ = "colder_liquid"
@@ -43,6 +46,7 @@ class ColderLiquid(Base):
     type = mapped_column(String(30))
     temp_after = mapped_column(Float)
     temp_before = mapped_column(Float)
+    exhauster_id = mapped_column(Integer, ForeignKey("exhauster.id"))
     colder = relationship("Colder", back_populates="colder_liquids")
 
 
@@ -51,6 +55,7 @@ class GasCollector(Base):
     id = mapped_column(Integer, primary_key=True)
     temp_before = mapped_column(Float)
     undpress_before = mapped_column(Float)
+    exhauster_id = mapped_column(ForeignKey("exhauster.id"))
     exhauster = relationship("Exhauster", back_populates="gas_collector")
 
 
@@ -60,6 +65,7 @@ class ValvePosition(Base):
     gas_valve_closed = mapped_column(String(30))
     gas_valve_open = mapped_column(String(30))
     gas_valve_position = mapped_column(String(30))
+    exhauster_id = mapped_column(ForeignKey("exhauster.id"))
     exhauster = relationship("Exhauster", back_populates="valve_position")
 
 
@@ -70,6 +76,7 @@ class MainDrive(Base):
     rotor_voltage = mapped_column(String(30))
     stator_current = mapped_column(String(30))
     stator_voltage = mapped_column(String(30))
+    exhauster_id = mapped_column(ForeignKey("exhauster.id"))
     exhauster = relationship("Exhauster", back_populates="main_drive")
 
 
@@ -78,6 +85,7 @@ class OilSystem(Base):
     id = mapped_column(Integer, primary_key=True)
     oil_level = mapped_column(String(30))
     oil_pressure = mapped_column(String(30))
+    exhauster_id = mapped_column(ForeignKey("exhauster.id"))
     exhauster = relationship("Exhauster", back_populates="oil_system")
 
 
@@ -123,6 +131,8 @@ engine = create_engine(
 
 Base.metadata.create_all(bind=engine)
 
+SessionLocal = sessionmaker(autoflush=False, bind=engine)
+db = SessionLocal()
 app = FastAPI()
 
 
@@ -169,13 +179,22 @@ html = """
 
 @app.get("/")
 async def get():
+    people = db.query(Exhauster).all()
+    for p in people:
+        print(f"{p.id}")
     return HTMLResponse(html)
 
 
-@app.post("/")
-async def post():
-    pass
-#get data from kafka
+# @app.post("/")
+# async def post():
+#     pass
+# #get data from kafka
+
+
+async def collect_last_data():
+    people = db.query(Exhauster).all()
+    for p in people:
+        print(f"{p.id}")
 
 
 @app.get("/get-first-screen")
