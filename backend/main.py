@@ -1,5 +1,5 @@
 from fastapi import FastAPI, WebSocket
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, JSONResponse
 from sqlalchemy import create_engine
 from sqlalchemy import Column, Integer
 from typing import List
@@ -11,6 +11,7 @@ from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
 from sqlalchemy.orm import relationship
 from sqlalchemy.orm import sessionmaker
+from recieve.step_1 import main as step
 
 
 class Base(DeclarativeBase):
@@ -38,7 +39,7 @@ class Colder(Base):
     exhauster = relationship("Exhauster", back_populates="colder")
 
 
-#TODO back_populates поменять backref
+# TODO back_populates поменять backref
 
 class ColderLiquid(Base):
     __tablename__ = "colder_liquid"
@@ -135,7 +136,6 @@ SessionLocal = sessionmaker(autoflush=False, bind=engine)
 db = SessionLocal()
 app = FastAPI()
 
-
 # @app.get("/")
 # def read_root():
 #     html_content = "<h2>Hello METANIT.COM!</h2>"
@@ -198,8 +198,8 @@ async def collect_last_data():
 
 
 @app.get("/get-first-screen")
-async def first_screen():
-    pass
+def first_screen():
+    return JSONResponse(content=step())
 
 
 @app.get("/get-second-screen/{exhauster_id}")
