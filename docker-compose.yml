@@ -3,7 +3,7 @@ services:
   frontend:
     build:
       context: ./frontend
-      dockerfile: frontend/dev.Dockerfile
+      dockerfile: dev.Dockerfile
     command: npm run both
 #    command: http-server dist --port 80
     ports:
