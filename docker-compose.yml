@@ -4,7 +4,7 @@ services:
     build:
       context: ./frontend
       dockerfile: dev.Dockerfile
-    command: npm run server && npm run serve
+    command: npm run server
 #    command: http-server dist --port 80
     ports:
       - "8080:8080"
