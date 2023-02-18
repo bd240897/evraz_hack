@@ -38,7 +38,7 @@ class Colder(Base):
     exhauster = relationship("Exhauster", back_populates="colder")
 
 
-#back_populates поменять backref
+#TODO back_populates поменять backref
 
 class ColderLiquid(Base):
     __tablename__ = "colder_liquid"
