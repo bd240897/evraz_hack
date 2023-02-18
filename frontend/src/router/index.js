@@ -2,8 +2,7 @@ import {createRouter, createWebHistory} from 'vue-router'
 import MainView from '../views/MainView.vue'
 import First from '../views/First.vue'
 import Second from '../views/Second.vue'
-
-
+import Third from '../views/Third.vue'
 
 const routes = [
     {
@@ -21,7 +20,11 @@ const routes = [
         name: 'Second',
         component: Second
     },
-
+    {
+        path: '/third-screen/',
+        name: 'Third',
+        component: Third
+    },
 ]
 
 const router = createRouter({

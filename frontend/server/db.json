@@ -828,6 +828,103 @@
           "oil_pressure": 4
       }
     }
+  ],
+
+  "get-third-screen": [
+    {
+      "id": 0,
+      "data": ["2022-12-30T06:00:10.16886", "2022-12-30T06:00:20.16886", "2022-12-30T06:00:22.16886", "2022-12-30T06:00:25.16886"],
+      "bearings": [
+        {"id": 0,
+          "vibrations": {
+            "axial_value": [1,2,12],
+            "vertical_value": [2,3,11],
+            "horizontal_value": [11,10,12]
+          },
+          "temperature": {
+            "value": [11,22,142],
+            "status": ["alarm","well","alarm"]
+          }
+        },
+        {"id": 1,
+          "vibrations": {
+            "axial_value": [11,22,142],
+            "vertical_value": [1,2,12],
+            "horizontal_value": [2,3,11],
+            "status": ["well","well","alarm"]
+          },
+
+          "temperature": {
+            "value": [11,22,142],
+            "status": ["well","well","alarm"]
+          }
+        },
+        {"id": 2,
+          "temperature": {
+            "value": [1,2,12],
+            "status": ["well","well","alarm"]
+          }
+        },
+        {"id": 3,
+          "temperature": {
+            "value": [11,22,142],
+            "status": ["alarm","well","well"]
+          }
+        },
+        {"id": 4,
+          "temperature": {
+            "value": [11,10,12],
+            "status": ["alarm","well","well"]
+          }
+        },
+        {"id": 5,
+          "temperature": {
+            "value": [11,22,142],
+            "status": ["well","well","alarm"]
+          }
+        },
+        {"id": 6,
+          "vibrations": {
+            "axial_value": [1,2,12],
+            "vertical_value": [2,3,11],
+            "horizontal_value": [11,10,12],
+            "status": ["alarm","well","well"]
+          },
+
+          "temperature": {
+            "value": [1,2,12],
+            "status": ["alarm","well","well"]
+          }
+        },
+        {"id": 7,
+          "vibrations": {
+            "axial_value": [1,2,12],
+            "vertical_value": [2,3,11],
+            "horizontal_value": [11,10,12],
+            "status": ["well","well","alarm"]
+          },
+
+          "temperature": {
+            "value": [11,10,12],
+            "status": ["alarm","well","well"]
+          }
+        },
+        {"id": 8,
+          "temperature": {
+            "value": [11,10,12],
+            "status": ["alarm","well","well"]
+          }
+        },
+        {"id": 9,
+          "temperature": {
+            "value": [11,10,12],
+            "status": ["well","well","alarm"]
+          }
+        }
+      ],
+      "work": [1,1,0],
+      "_comment": "Третий экран получает данные только для одного эксгаустера. История за 3 сообщения."
+    }
   ]
 
 }

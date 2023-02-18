@@ -18,7 +18,7 @@
           <b-nav-item to="/" class="ms-2 text-white" active-class="white" href="#">Main</b-nav-item>
           <b-nav-item to="/first-screen/" class="ms-2" href="#">First</b-nav-item>
           <b-nav-item to="/second-screen/" class="ms-2" href="#">Second</b-nav-item>
-<!--          <b-nav-item to="/team/" class="ms-2" href="#">About team</b-nav-item>-->
+          <b-nav-item to="/third-screen/" class="ms-2" href="#">Third</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
