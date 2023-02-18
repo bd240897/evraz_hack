@@ -1,21 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="static/bootstrap-5.0.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="static/css/second.css" rel="stylesheet">
-</head>
-<body>
-<h1 class="screen-name text-center">Второй экран</h1>
+<template>
+  <Navbar/>
 
+  <h1 class="screen-name text-center">Второй экран</h1>
 
-<style>
+  <!--  {{this.$route.params.id}}-->
 
-</style>
-
-<section class="second_screen">
+  <section class="second_screen">
     <div class="container">
+
+
+
+
+
+
+
+
+
         <div class="row mt-5">
             <div class="col-1"></div>
 
@@ -245,91 +245,174 @@
 </section>
 
 
-<!--  {{this.$route.params.id}}-->
 
-<!--<section class="exausters">-->
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-<!--            &lt;!&ndash;Эксгаустер&ndash;&gt;-->
-<!--            <div class="exauster">-->
+  <section class="exausters">
+    <div class="container">
+      <div class="row">
+        <!--Эксгаустер-->
+        <div class="exauster">
 
-<!--                &lt;!&ndash;TODO delete &ndash;&gt;-->
-<!--                <div class="open-wallet d-flex justify-content-center mb-3">-->
-<!--                    <button v-on:click="goToFirst" class="button_item btn btn-primary py-3 p" type="submit">-->
-<!--                        goToFirst-->
-<!--                    </button>-->
-<!--                </div>-->
+<!--          &lt;!&ndash;TODO delete &ndash;&gt;-->
+<!--          <div class="open-wallet d-flex justify-content-center mb-3">-->
+<!--            <button v-on:click="goToFirst" class="button_item btn btn-primary py-3 p" type="submit">-->
+<!--              goToFirst-->
+<!--            </button>-->
+<!--          </div>-->
 
-<!--                &lt;!&ndash;Фото машины&ndash;&gt;-->
-<!--                <div class="col-6">-->
-<!--                    <h2 class="exauster__name">Exauster #{{ secondData.id + 1 }}</h2>-->
-<!--                    <img class="exauster__img"-->
-<!--                         src="https://www.aircontrolindustries.com/wp-content/uploads/2019/04/Compressor-60hz-2.jpg"-->
-<!--                         alt="">-->
-<!--                </div>-->
+          <!--Фото машины-->
+          <div class="col-6">
+            <h2 class="exauster__name">Exauster #{{ secondData.id + 1 }}</h2>
+            <img class="exauster__img"
+                 src="https://www.aircontrolindustries.com/wp-content/uploads/2019/04/Compressor-60hz-2.jpg" alt="">
+          </div>
 
-<!--                <div class="exauster__body row mb-2">>-->
+          <div class="exauster__body row mb-2">>
 
-<!--                    <h3 class="exauster__body__header">Все подшипники</h3>-->
+            <h3 class="exauster__body__header">Все подшипники</h3>
 
-<!--                    &lt;!&ndash;Статус работы&ndash;&gt;-->
-<!--                    <div class="exauster__parameter">-->
-<!--                        <div v-if="secondData.work" class="exauster__parameter__work&#45;&#45;yes">-->
-<!--                            Работает-->
-<!--                        </div>-->
-<!--                        <div v-else class="exauster__parameter__work&#45;&#45;no">-->
-<!--                            Не работает-->
-<!--                        </div>-->
-<!--                    </div>-->
+            <!--Статус работы-->
+            <div class="exauster__parameter">
+              <div v-if="secondData.work" class="exauster__parameter__work--yes">
+                Работает
+              </div>
+              <div v-else class="exauster__parameter__work--no">
+                Не работает
+              </div>
+            </div>
 
-<!--                    &lt;!&ndash;Подшипники&ndash;&gt;-->
-<!--                    <div class="exauster__body__bearings border border-primary col-3"-->
-<!--                         v-for="(bearing, index) in secondData.bearings">-->
+            <!--Подшипники-->
+            <div class="exauster__body__bearings border border-primary col-3"
+                 v-for="(bearing, index) in secondData.bearings">
 
-<!--                        &lt;!&ndash;Параметры&ndash;&gt;-->
-<!--                        <div class="exauster__body__bearings__bearing">-->
-<!--                            <div class="exauster__body__bearings__bearing__header"># {{ index }}</div>-->
+              <!--Параметры-->
+              <div class="exauster__body__bearings__bearing">
+                <div class="exauster__body__bearings__bearing__header"># {{ index }}</div>
 
 
-<!--                            &lt;!&ndash;Температура&ndash;&gt;-->
-<!--                            <div class="exauster__body__bearings__bearing__temperature alert"-->
-<!--                                 v-bind:class="{'alert-warning': isWarning(bearing.temperature.status),-->
-<!--                                    'alert-danger': isAlarm(bearing.temperature.status)}"-->
-<!--                            >-->
-<!--                                <p>Temperature: {{ bearing.temperature.value }}</p>-->
-<!--                                <p>Status: {{ bearing.temperature.status }}</p>-->
-<!--                            </div>-->
+                <!--Температура-->
+                <div class="exauster__body__bearings__bearing__temperature alert"
+                     v-bind:class="{'alert-warning': isWarning(bearing.temperature.status),
+                                    'alert-danger': isAlarm(bearing.temperature.status)}"
+                >
+                  <p>Temperature: {{ bearing.temperature.value }}</p>
+                  <p>Status: {{ bearing.temperature.status }}</p>
+                </div>
 
-<!--                            &lt;!&ndash;Вибрация&ndash;&gt;-->
-<!--                            <div class="exauster__body__bearings__bearing__vibration alert"-->
-<!--                                 v-if="bearing.vibrations"-->
-<!--                                 v-bind:class="{'alert-warning': isWarning(bearing.vibrations.status),-->
-<!--                                    'alert-danger': isAlarm(bearing.vibrations.status)}"-->
-<!--                            >-->
-<!--                                <p>Vibrations A: {{ bearing.vibrations.axial_value }}</p>-->
-<!--                                <p>Vibrations V: {{ bearing.vibrations.vertical_value }}</p>-->
-<!--                                <p>ibrations H: {{ bearing.vibrations.horizontal_value }}</p>-->
-<!--                                <p>Status: {{ bearing.vibrations.status }}</p>-->
-<!--                            </div>-->
-<!--                        </div>-->
+                <!--Вибрация-->
+                <div class="exauster__body__bearings__bearing__vibration alert"
+                     v-if="bearing.vibrations"
+                     v-bind:class="{'alert-warning': isWarning(bearing.vibrations.status),
+                                    'alert-danger': isAlarm(bearing.vibrations.status)}"
+                >
+                  <p>Vibrations A: {{ bearing.vibrations.axial_value }}</p>
+                  <p>Vibrations V: {{ bearing.vibrations.vertical_value }}</p>
+                  <p>ibrations H: {{ bearing.vibrations.horizontal_value }}</p>
+                  <p>Status: {{ bearing.vibrations.status }}</p>
+                </div>
+              </div>
 
-<!--                    </div>-->
+            </div>
 
-<!--                </div>-->
+          </div>
 
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- СКРИПТЫ -->
+  <Footer/>
+</template>
 
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
-<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
-<script type="text/javascript" src="static/jquery/js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="static/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="static/jquery-tmpl/js/jquery.tmpl.1.0.0.js"></script>
-<!--<script src="static/js/login.js"></script>-->
+<script>
+import goToSomewhere from "@/mixins/goToSomewhere";
+import {mapActions, mapState} from "vuex";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-</body>
-</html>
+export default {
+  name: "Second",
+  components: {
+    Navbar,
+    Footer
+  },
+  mixins: [goToSomewhere],
+  data() {
+    return {
+      temp: '',
+    }
+  },
+  computed: {
+    ...mapState('second', ['secondData',]),
+  },
+  methods: {
+    ...mapActions('second', ["GET_SECOND_DATA",]),
+    isWarning(str) {
+      return str === 'warning'
+    },
+    isAlarm(str) {
+      return str === 'alarm'
+    },
+  },
+  created() {
+    this.GET_SECOND_DATA({id: this.$route.params.id})
+  },
+}
+</script>
+
+<style lang="sass" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap')
+
+html, body
+  height: 100%
+
+  .exauster
+    padding: 0 20px
+    margin: 0
+
+    &__name
+      font-weight: bold
+
+    &__img
+      height: auto
+      width: 100%
+
+    &__body
+      &__header
+        font-size: 22px
+        text-align: center
+
+      &__bearings
+        &__bearing
+          &__header
+            padding: 0
+            margin: 0
+            font-weight: bold
+
+          &__vibration
+            padding: 0
+            margin: 0
+
+            p
+              padding: 0
+              margin: 0
+
+          &__temperature
+            padding: 0
+            margin: 0
+
+            p
+              padding: 0
+              margin: 0
+
+
+  // статус работы
+  .exauster__parameter__work
+
+  .exauster__parameter__work--yes
+    background-color: yellow
+    color: black
+
+  .exauster__parameter__work--no
+    background-color: black
+    color: white
+</style>
