@@ -5,7 +5,7 @@
 
   <!--  {{this.$route.params.id}}-->
 
-  <section class="second_screen">
+  <section class="second_screen mb-5">
     <div class="container">
 
 
@@ -14,11 +14,11 @@
       </div>
 
       <!--Статус работы-->
-      <div class="exauster__parameter">
-        <div v-if="secondData.work" class="exauster__parameter__work--yes">
+      <div class="exauster__work">
+        <div v-if="secondData.work" class="block_exauster__params--well">
           Работает
         </div>
-        <div v-else class="exauster__parameter__work--no">
+        <div v-else class="block_exauster__params--alert">
           Не работает
         </div>
       </div>
@@ -261,10 +261,10 @@
         <div class="col-1 d-flex flex-column">
           <div class="block_exauster">
             <p class="block_exauster__name">Главный привод</p>
-            <p class="block_exauster__params">Ток, А Главный привод 000</p>
-            <p class="block_exauster__params">Ток двигателя, А 000</p>
-            <p class="block_exauster__params">Напряжение ротера, кВт 000</p>
-            <p class="block_exauster__params">Напряжение статера, кВт 000</p>
+            <p class="block_exauster__params">Ток привода 0</p>
+            <p class="block_exauster__params">Ток двигателя 0</p>
+            <p class="block_exauster__params">Напряжение ротера 0</p>
+            <p class="block_exauster__params">Напряжение статера 0</p>
           </div>
 
           <div class="horizontal_pipe d-flex align-content-center justify-content-center">
@@ -304,81 +304,6 @@
           <div class="horizontal_pipe d-flex flex-column" style="margin-right: 45px; margin-left: 45px">
             <img src="../assets/img/first/труба_с.png" alt="">
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="exausters">
-    <div class="container">
-      <div class="row">
-        <!--Эксгаустер-->
-        <div class="exauster">
-
-          <!--TODO delete -->
-          <div class="open-wallet d-flex justify-content-center mb-3">
-            <button v-on:click="goToFirst" class="button_item btn btn-primary py-3 p" type="submit">
-              goToFirst
-            </button>
-          </div>
-
-          <!--Фото машины-->
-          <div class="col-6">
-            <h2 class="exauster__name">Exauster #{{ secondData.id + 1 }}</h2>
-            <img class="exauster__img"
-                 src="https://www.aircontrolindustries.com/wp-content/uploads/2019/04/Compressor-60hz-2.jpg" alt="">
-          </div>
-
-          <div class="exauster__body row mb-2">>
-
-            <h3 class="exauster__body__header">Все подшипники</h3>
-
-            <!--Статус работы-->
-            <div class="exauster__parameter">
-              <div v-if="secondData.work" class="exauster__parameter__work--yes">
-                Работает
-              </div>
-              <div v-else class="exauster__parameter__work--no">
-                Не работает
-              </div>
-            </div>
-
-            <!--Подшипники-->
-            <div class="exauster__body__bearings border border-primary col-3"
-                 v-for="(bearing, index) in secondData.bearings">
-
-              <!--Параметры-->
-              <div class="exauster__body__bearings__bearing">
-                <div class="exauster__body__bearings__bearing__header"># {{ index }}</div>
-
-
-                <!--Температура-->
-                <div class="exauster__body__bearings__bearing__temperature alert"
-                     v-bind:class="{'alert-warning': isWarning(bearing.temperature.status),
-                                    'alert-danger': isAlarm(bearing.temperature.status)}"
-                >
-                  <p>Temperature: {{ bearing.temperature.value }}</p>
-                  <p>Status: {{ bearing.temperature.status }}</p>
-                </div>
-
-                <!--Вибрация-->
-                <div class="exauster__body__bearings__bearing__vibration alert"
-                     v-if="bearing.vibrations"
-                     v-bind:class="{'alert-warning': isWarning(bearing.vibrations.status),
-                                    'alert-danger': isAlarm(bearing.vibrations.status)}"
-                >
-                  <p>Vibrations A: {{ bearing.vibrations.axial_value }}</p>
-                  <p>Vibrations V: {{ bearing.vibrations.vertical_value }}</p>
-                  <p>ibrations H: {{ bearing.vibrations.horizontal_value }}</p>
-                  <p>Status: {{ bearing.vibrations.status }}</p>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
         </div>
       </div>
     </div>
@@ -454,42 +379,6 @@ html, body
         font-size: 22px
         text-align: center
 
-      &__bearings
-        &__bearing
-          &__header
-            padding: 0
-            margin: 0
-            font-weight: bold
-
-          &__vibration
-            padding: 0
-            margin: 0
-
-            p
-              padding: 0
-              margin: 0
-
-          &__temperature
-            padding: 0
-            margin: 0
-
-            p
-              padding: 0
-              margin: 0
-
-
-  // статус работы
-  .exauster__parameter__work
-
-  .exauster__parameter__work--yes
-    background-color: yellow
-    color: black
-
-  .exauster__parameter__work--no
-    background-color: black
-    color: white
-
-
 .temperature_oil__block__img
   text-align: center
 
@@ -535,11 +424,16 @@ p
       font-weight: bold
       border-radius: 5px
 
+    &--well
+      background-color: green
+      font-weight: bold
+      border-radius: 5px
 
-.box
-  display: flex
-  flex-wrap: wrap
-  height: 400px
-  align-content: space-between
+
+.exauster__work
+  border-radius: 10px
+  color: white
+  text-align: center
+  margin: 20px 0
 
 </style>

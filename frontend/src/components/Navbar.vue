@@ -1,7 +1,7 @@
 <template>
   <div class="page_nav mb-2">
     <b-navbar toggleable type="dark" variant="primary">
-      <b-navbar-brand v-on:click="goToMain" class="ms-2 text-white fw-bold" href="#">Tail app</b-navbar-brand>
+      <b-navbar-brand v-on:click="goToMain" class="ms-2 text-white fw-bold" href="#">Евраз</b-navbar-brand>
 
       <b-navbar-toggle class="me-2" target="navbar-toggle-collapse">
 
