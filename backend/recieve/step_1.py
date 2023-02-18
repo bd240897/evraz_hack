@@ -1,7 +1,7 @@
 from kafka import KafkaConsumer
 from json import loads, dumps
 import re
-from data import datafile_temp, datafile_vibr, datafile_othr
+from backend.recieve.data import datafile_temp, datafile_vibr, datafile_othr
 
 ## credentials
 host = 'rc1a-b5e65f36lm3an1d5.mdb.yandexcloud.net:9091'
@@ -55,7 +55,7 @@ def update_json_othr(database, category, value, data, message):
         for i in (database[k]):
             index = str(database[k][j][1:-1])
             regexdata = re.search((r'' + (index) + r'\]\": -?\d+\.\d+'), message)
-            print(index, regexdata)
+            # print(index, regexdata)
             regexdata2 = re.search(r' -?\d+\.\d+', regexdata[0])
             data["ex" + str(k + 1)][category][value] = regexdata2[0]
 
