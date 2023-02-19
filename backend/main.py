@@ -1,5 +1,5 @@
 import json
-
+from datetime import datetime
 from fastapi import FastAPI, WebSocket
 from fastapi.responses import HTMLResponse, JSONResponse
 from sqlalchemy import create_engine
@@ -206,8 +206,8 @@ def first_screen():
             # print(v1)
             for k2, v2 in v1.items():
                 if k2 == 'temperature':
-                    print('temp')
-                    print(js[k][k1][k2])
+                    # print('temp')
+                    # print(js[k][k1][k2])
                     js[k][k1][k2]['flag'] = 'norm'
                     if js[k][k1][k2]['value'] >= js[k][k1][k2]['temp_w_max'] or js[k][k1][k2]['value'] <= js[k][k1][k2]['temp_w_min']:
                         js[k][k1][k2]['flag'] = 'warning'
@@ -219,8 +219,8 @@ def first_screen():
                     del js[k][k1][k2]['temp_a_min']
 
                 elif k2 == 'vibration_axial':
-                    print('vibration_axial')
-                    print(js[k][k1][k2])
+                    # print('vibration_axial')
+                    # print(js[k][k1][k2])
                     js[k][k1][k2]['flag'] = 'norm'
                     if js[k][k1][k2]['value'] >= js[k][k1][k2]['vibration_a_w_max'] or js[k][k1][k2]['value'] <= js[k][k1][k2][
                         'vibration_a_w_min']:
@@ -233,8 +233,8 @@ def first_screen():
                     del js[k][k1][k2]['vibration_a_a_max']
                     del js[k][k1][k2]['vibration_a_a_min']
                 elif k2 == 'vibration_horizontal':
-                    print('vibration_horizontal')
-                    print(js[k][k1][k2])
+                    # print('vibration_horizontal')
+                    # print(js[k][k1][k2])
                     js[k][k1][k2]['flag'] = 'norm'
                     if js[k][k1][k2]['value'] >= js[k][k1][k2]['vibration_h_w_max'] or js[k][k1][k2]['value'] <= \
                             js[k][k1][k2][
@@ -249,8 +249,8 @@ def first_screen():
                     del js[k][k1][k2]['vibration_h_a_max']
                     del js[k][k1][k2]['vibration_h_a_min']
                 elif k2 == 'vibration_vertical':
-                    print('vibration_vertical')
-                    print(js[k][k1][k2])
+                    # print('vibration_vertical')
+                    # print(js[k][k1][k2])
                     js[k][k1][k2]['flag'] = 'norm'
                     if js[k][k1][k2]['value'] >= js[k][k1][k2]['vibration_v_w_max'] or js[k][k1][k2]['value'] <= \
                             js[k][k1][k2][
@@ -264,7 +264,32 @@ def first_screen():
                     del js[k][k1][k2]['vibration_v_w_min']
                     del js[k][k1][k2]['vibration_v_a_max']
                     del js[k][k1][k2]['vibration_v_a_min']
-    return JSONResponse(content=js)
+    result = {"exausters": []}
+    i = 0
+    for k, v in js.items():
+        # print(k)
+        # i = int(k[2:])
+        timestampStr = datetime.now().strftime("%d-%b-%Y (%H:%M:%S.%f)")
+        result['exausters'].append({"id": i, "bearings": [], "work": 0, "time": timestampStr})
+        for k1, v1 in v.items():
+            # print(k1)
+            if k1[0] == 'b':
+                # print(result['exausters'][i-1]['bearings'])
+                j = int(k1[8:])
+                # print(j)
+                result['exausters'][i - 1]['bearings'].append({"id": j})
+
+            for k2, v2 in v1.items():
+                if k1[0] == 'b' and k2[0] == 'v':
+                    result['exausters'][i - 1]['bearings'][j-1]['vibration'] = 'well'
+                elif k1[0] == 'b' and k2[0] == 't':
+                    result['exausters'][i - 1]['bearings'][j - 1]["temperature"] = 'well'
+                print(k2)
+                print(v2)
+                # pass
+        i += 1
+
+    return JSONResponse(content=result)
 
 
 @app.get("/get-second-screen/{exhauster_id}")
