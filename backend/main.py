@@ -269,7 +269,7 @@ def first_screen():
     for k, v in js.items():
         # print(k)
         # i = int(k[2:])
-        timestampStr = datetime.now().strftime("%d-%b-%Y (%H:%M:%S.%f)")
+        timestampStr = datetime.now().strftime("%Y-%m-%dT%H:%M:%S.%f")
         result['exausters'].append({"id": i, "bearings": [], "work": js["ex"+str(i)]["work"], "time": timestampStr})
         if float(result['exausters'][i-1]['work']['status']) >= 1:
             result['exausters'][i - 1]['work'] = 1
