@@ -1,0 +1,141 @@
+{
+    "ex1":{
+        "bearing_1":{
+            "temperature": {
+                "value": "str",
+                "flag": "str"
+            },
+            "vibration_axial": {
+                "value": "str",
+                "flag": "str"
+            },
+            "vibration_horizontal": {
+                "value": "str",
+                "flag": "str"
+            },
+            "vibration_vertical": {
+                "value": "str",
+                "flag": "str"
+            }
+        },
+        "bearing_2":{
+            "temperature": {
+                "value": "str",
+                "flag": "str"
+            },
+            "vibration_axial": {
+                "value": "str",
+                "flag": "str"
+            },
+            "vibration_horizontal": {
+                "value": "str",
+                "flag": "str"
+            },
+            "vibration_vertical": {
+                "value": "str",
+                "flag": "str"
+            }
+        },
+        "bearing_3":{
+            "temperature": {
+                "value": "str",
+                "flag": "str"
+            }
+        },
+        "bearing_4":{
+            "temperature": {
+                "value": "str",
+                "flag": "str"
+            }
+        },
+        "bearing_5":{
+            "temperature": {
+                "value": "str",
+                "flag": "str"
+            }
+        },
+        "bearing_6":{
+            "temperature": {
+                "value": "str",
+                "flag": "str"
+            }
+        },
+        "bearing_7":{
+            "temperature": {
+                "value": "str",
+                "flag": "str"
+            },
+            "vibration_axial": {
+                "value": "str",
+                "flag": "str"
+            },
+            "vibration_horizontal": {
+                "value": "str",
+                "flag": "str"
+            },
+            "vibration_vertical": {
+                "value": "str",
+                "flag": "str"
+            }
+        },
+        "bearing_8":{
+            "temperature": {
+                "value": "str",
+                "flag": "str"
+            },
+            "vibration_axial": {
+                "value": "str",
+                "flag": "str"
+            },
+            "vibration_horizontal": {
+                "value": "str",
+                "flag": "str"
+            },
+            "vibration_vertical": {
+                "value": "str",
+                "flag": "str"
+            }
+        },
+        "bearing_9":{
+            "temperature": {
+                "value": "str",
+                "flag": "str"
+            }
+        },
+        "colder":{
+            "oil": {
+                "temp_after": "str",
+                "temp_before": "str"
+            },
+            "water": {
+                "temp_after": "str",
+                "temp_before": "str"
+            }
+        },
+        "gas_collector":{
+            "temp_before": "str",
+            "undpress_before": "str"
+        },
+        "valve_position":{
+            "gas_valve_closed": "str",
+            "gas_valve_open": "str",
+            "gas_valve_position": "str"
+        },
+        "main_drive":{
+            "rotor_current": "str",
+            "rotor_voltage": "str",
+            "stator_current": "str",
+            "stator_voltage": "str"
+        },
+        "oil_system": {
+            "oil_level": "str",
+            "oil_pressure": "str",
+        },
+        "work": {
+            "status": "str",
+            "flag": "str"
+        }
+        
+    }
+
+}
