@@ -265,7 +265,7 @@ def first_screen():
                     del js[k][k1][k2]['vibration_v_a_max']
                     del js[k][k1][k2]['vibration_v_a_min']
     result = {"exausters": []}
-    i = 0
+    i = 1
     for k, v in js.items():
         # print(k)
         # i = int(k[2:])
@@ -280,12 +280,27 @@ def first_screen():
                 result['exausters'][i - 1]['bearings'].append({"id": j})
 
             for k2, v2 in v1.items():
+                z = 3
                 if k1[0] == 'b' and k2[0] == 'v':
-                    result['exausters'][i - 1]['bearings'][j-1]['vibration'] = 'well'
+                    if js[k][k1][k2]["flag"] == 'norm':
+                        z = min(z, 3)
+                    elif js[k][k1][k2]["flag"] == 'warning':
+                        z = min(z, 2)
+                    else:
+                        z = min(1, z)
+
                 elif k1[0] == 'b' and k2[0] == 't':
-                    result['exausters'][i - 1]['bearings'][j - 1]["temperature"] = 'well'
+                    print(js[k][k1][k2])
+                    result['exausters'][i - 1]['bearings'][j - 1]["temperature"] = js[k][k1][k2]["flag"]
+                    pass
                 print(k2)
                 print(v2)
+            if z == 3:
+                result['exausters'][i - 1]['bearings'][j - 1]['vibration'] = 'norm'
+            if z == 2:
+                result['exausters'][i - 1]['bearings'][j - 1]['vibration'] = 'warning'
+            if z == 1:
+                result['exausters'][i - 1]['bearings'][j - 1]['vibration'] = 'alarm'
                 # pass
         i += 1
 
