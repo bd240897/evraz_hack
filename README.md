@@ -5,7 +5,7 @@
 
 ## Демо:
 =
-[![Watch the video](./materials/prototype_preview.png)](https://youtu.be/ATt0Hh42Ox8;)
+[![Watch the video](./materials/prototype_preview_v2.jpg)](https://youtu.be/ATt0Hh42Ox8;)
 
 ## Оглавление
 0. [Команда](#Команда)
