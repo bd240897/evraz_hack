@@ -270,7 +270,11 @@ def first_screen():
         # print(k)
         # i = int(k[2:])
         timestampStr = datetime.now().strftime("%d-%b-%Y (%H:%M:%S.%f)")
-        result['exausters'].append({"id": i, "bearings": [], "work": 0, "time": timestampStr})
+        result['exausters'].append({"id": i, "bearings": [], "work": js["ex"+str(i)]["work"], "time": timestampStr})
+        if float(result['exausters'][i-1]['work']['status']) >= 1:
+            result['exausters'][i - 1]['work'] = 1
+        else:
+            result['exausters'][i - 1]['work'] = 0
         for k1, v1 in v.items():
             # print(k1)
             if k1[0] == 'b':
