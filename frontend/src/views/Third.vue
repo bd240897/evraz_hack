@@ -11,39 +11,43 @@
         <!--Эксгаустер-->
         <div class="exauster">
 
-          <select v-model="selected_exauster">
-            <option v-for="option in selectData.options_exauster" v-bind:value="option.value">
-              {{ option.text }}
-            </option>
-          </select>
-          <select v-model="selected_bearing">
-            <option v-for="option in selectData.options_bearing" v-bind:value="option.value">
-              {{ option.text }}
-            </option>
-          </select>
-          <select v-model="selected_feature">
-            <option v-for="option in selectData.options_feature" v-bind:value="option.value">
-              {{ option.text }}
-            </option>
-          </select>
+          <!--          <select v-model="selected_exauster">-->
+          <!--            <option v-for="option in selectData.options_exauster" v-bind:value="option.value">-->
+          <!--              {{ option.text }}-->
+          <!--            </option>-->
+          <!--          </select>-->
+          <!--          <select v-model="selected_bearing">-->
+          <!--            <option v-for="option in selectData.options_bearing" v-bind:value="option.value">-->
+          <!--              {{ option.text }}-->
+          <!--            </option>-->
+          <!--          </select>-->
+          <!--          <select v-model="selected_feature">-->
+          <!--            <option v-for="option in selectData.options_feature" v-bind:value="option.value">-->
+          <!--              {{ option.text }}-->
+          <!--            </option>-->
+          <!--          </select>-->
 
-          <span>Выбрано: {{ selected }}</span>
+          <!--          <span>Выбрано: {{ selected }}</span>-->
 
-<!--          {{this.thirdData}}-->
 
-          1234
         </div>
       </div>
     </div>
   </section>
 
-  <LineChart :chartData="chartData"/>
+  <section class="graph">
+    <div class="container">
+      <h3>Mocked graphic</h3>
+      <LineChart :chartData="chartData"/>
+    </div>
+  </section>
 
-  <!--TODO delete -->
-  <div class="open-wallet d-flex justify-content-center mb-3">
-    <button v-on:click="setFirstData" class="button_item btn btn-primary py-3 p" type="submit">FirstData</button>
-    <button v-on:click="setSecondData" class="button_item btn btn-primary py-3 p" type="submit">SecondData</button>
-  </div>
+
+  <!--  &lt;!&ndash;TODO delete &ndash;&gt;-->
+  <!--  <div class="open-wallet d-flex justify-content-center mb-3">-->
+  <!--    <button v-on:click="setFirstData" class="button_item btn btn-primary py-3 p" type="submit">FirstData</button>-->
+  <!--    <button v-on:click="setSecondData" class="button_item btn btn-primary py-3 p" type="submit">SecondData</button>-->
+  <!--  </div>-->
 
   <Footer/>
 </template>
@@ -69,17 +73,16 @@ export default {
     return {
       temp: '',
       chartData: {
-        labels: ['January', 'February', 'March'],
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
         datasets: [
           {
-            label: 'Data One',
+            label: 'Temperature of 1 bearing',
             backgroundColor: '#FC2525',
-            data: [40, 20, 12]
-          },
-          {
-            label: 'Data Two',
-            backgroundColor: '#05CBE1',
-            data: [45, 20, 12]
+            data: [40.900001525878906, 39.900001525878906, 39.600001525878906, 37.900001525878906, 38.900001525878906,
+              38.700001525878906, 38.700001525878906, 39.600001525878906, 39.900001525878906, 40.900001525878906,
+              40.900001525878906, 39.900001525878906, 39.600001525878906, 37.900001525878906, 38.900001525878906,
+              40.600001525878906, 40.900001525878906, 40.300001525878906, 39.900001525878906, 38.900001525878906,
+            ]
           },
         ]
       },

@@ -136,7 +136,7 @@
               Т, °С {{ secondData.bearings[7].temperature.value }}
             </p>
 
-            <div v-bind:class="isWarningOrAlarm(secondData.bearings[7].temperature.status)">
+            <div v-if="secondData.bearings[7].vibrations" v-bind:class="isWarningOrAlarm(secondData.bearings[7].vibrations.status)">
               <p class="block_exauster__params">В, мм/с {{ secondData.bearings[7].vibrations.axial_value }}</p>
               <p class="block_exauster__params">Г, мм/с {{ secondData.bearings[7].vibrations.vertical_value }}</p>
               <p class="block_exauster__params">О, мм/с {{ secondData.bearings[7].vibrations.horizontal_value }}</p>
